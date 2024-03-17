@@ -1,0 +1,13 @@
+.wrapper {
+    width: 100%;
+    height: 76px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.inner {
+    height: 100%;
+    width: 1416px;
+    background-color: #ccc;
+    padding: 0 25px;
+}

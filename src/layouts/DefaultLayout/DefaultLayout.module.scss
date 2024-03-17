@@ -3,3 +3,12 @@
     flex-direction: column;
     align-items: center;
 }
+.container {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+}
+.content {
+    min-height: 500px;
+}
