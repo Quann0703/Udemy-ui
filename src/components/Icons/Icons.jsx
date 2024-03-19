@@ -28,7 +28,6 @@ export const CartIcon = ({ width = '2.5rem', height = '2.5rem', className }) => 
         viewBox="0 0 24 24"
         strokeWidth="1.5"
         stroke="currentColor"
-        class="w-6 h-6"
     >
         <path
             strokeLinecap="round"
@@ -39,35 +38,16 @@ export const CartIcon = ({ width = '2.5rem', height = '2.5rem', className }) => 
 );
 export const SearchIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
     <svg
-        className={className}
         width={width}
         height={height}
-        aria-label="Tìm kiếm"
-        class="x1lliihq x1n2onr6 x5n08af"
-        fill="currentColor"
+        className={className}
+        aria-label="Gửi cụm từ tìm kiếm"
         role="img"
-        viewBox="0 0 24 24"
+        focusable="false"
+        // class="ud-icon ud-icon-medium ud-icon-color-neutral"
+        xmlns="http://www.w3.org/2000/svg"
     >
-        <title>Tìm kiếm</title>
-        <path
-            d="M19 10.5A8.5 8.5 0 1 1 10.5 2a8.5 8.5 0 0 1 8.5 8.5Z"
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-        ></path>
-        <line
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            x1="16.511"
-            x2="22"
-            y1="16.511"
-            y2="22"
-        ></line>
+        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
     </svg>
 );
 export const UploadIcon = ({ width = '1.9rem', height = '2.1rem', className }) => (

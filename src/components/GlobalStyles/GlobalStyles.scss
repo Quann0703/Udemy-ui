@@ -1,20 +1,13 @@
 @import 'normalize.css';
 
-:root {
-    --primary: #fe2c55;
-    --black: #000;
-    --text-color: #161823;
-    --white: #fff;
-    --colorFooter: #1c1d1f;
-    --font-family: 'UdemySans', san-serif;
-
-    //default layout
-    --default-layout-header-height: 60px;
-    --default-layout-width: 1150px;
-    --default-layout-horizontal-spacer: 24px;
-}
+@import './Root.scss';
+@import './GroupStyles.scss';
 html {
     font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 * {
     box-sizing: border-box;
@@ -22,22 +15,51 @@ html {
     padding: 0;
 }
 // fonts
+// @font-face {
+//     font-family: UdemySans;
+//     src: url(/assets/fonts/Udemy-Sans-Regular-v1.woff2);
+//     font-weight: 400;
+// }
+
+// @font-face {
+//     font-family: UdemySans;
+//     src: url(/assets/fonts/Udemy-Sans-Bold-v1.woff2);
+//     font-weight: 600;
+// }
+
+// @font-face {
+//     font-family: UdemySans;
+//     src: url(/assets/fonts/Udemy-Sans-Bold-v1.woff2);
+//     font-weight: 700;
+// }
+
 @font-face {
-    font-family: UdemySans;
-    src: url(/assets/fonts/Udemy-Sans-Regular-v1.woff2);
+    font-family: 'Udemy Sans';
+    font-style: normal;
     font-weight: 400;
+    /* To match token @font-weight-normal */
+    font-display: fallback;
+    src: local('Udemy Sans Regular'), local('UdemySans-Regular'),
+        url(/assets/fonts/Udemy-Sans-Regular-v1.woff2) format('woff2');
 }
 
 @font-face {
-    font-family: UdemySans;
-    src: url(/assets/fonts/Udemy-Sans-Bold-v1.woff2);
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: UdemySans;
-    src: url(/assets/fonts/Udemy-Sans-Bold-v1.woff2);
+    font-family: 'Udemy Sans';
+    font-style: normal;
     font-weight: 700;
+    /* To match token @font-weight-bold */
+    font-display: fallback;
+    src: local('Udemy Sans Bold'), local('UdemySans-Bold'), url(/assets/fonts/Udemy-Sans-Bold-v1.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: SuisseWorks;
+    font-style: normal;
+    font-weight: 700;
+    /* To match token @font-weight-bold */
+    font-display: fallback;
+    src: local('SuisseWorks Bold'), local('SuisseWorks-Bold'),
+        url(/assets/fonts/Udemy-Sans-Bold-v1.woff2) format('woff2');
 }
 
 // @font-face {
@@ -46,8 +68,9 @@ html {
 //     font-weight: 700;
 // }
 body {
-    font-family: var(--font-family);
+    font-family: var(--font-stack-text);
     overflow-y: overlay;
+    font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeLegibility;
@@ -115,4 +138,44 @@ body {
     .tippy-content {
         padding: 8px 9px;
     }
+}
+
+// input
+input[type='text' i] {
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+input:not([type='file' i], [type='image' i], [type='checkbox' i], [type='radio' i]) {
+}
+
+//ul,li
+ul,
+ol {
+    padding-left: 2.4rem;
+}
+
+li {
+    padding-left: 0.8rem;
+}
+
+li + li {
+    margin-top: 0.4rem;
+}
+
+p + p,
+p + ul,
+p + ol,
+ul + p,
+ul + ol,
+ol + ol,
+ol + p,
+ol + ul {
+    margin-top: 0.8rem;
+}
+*:focus,
+a:focus,
+input:focus,
+button:focus {
+    outline: none;
 }
