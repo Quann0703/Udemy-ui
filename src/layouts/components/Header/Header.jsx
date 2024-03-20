@@ -1,10 +1,11 @@
 import classNames from 'classnames/bind';
 
 import styles from './Header.module.scss';
-import images from '~/assets/img';
+import images from '~/assets/images';
 import { Link } from 'react-router-dom';
 import config from '~/config';
 import Search from '../Search';
+
 const cx = classNames.bind(styles);
 function Header() {
     return (

@@ -365,3 +365,38 @@
     height: 100%;
     padding: 0 2.4rem 0 0;
 }
+
+// form search item
+.ud-search-form-autocomplete-suggestion-details {
+    display: flex;
+    margin-top: 0.4rem;
+    align-items: center;
+    color: #6a6f73;
+}
+.ud-search-form-autocomplete-suggestion-instructor-name {
+    padding-left: 0.8rem;
+}
+
+.ud-search-form-autocomplete-suggestion-content {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ud-block-list-item-content {
+    flex: 1;
+    min-width: 1px;
+}
+.ud-block-list-item {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    letter-spacing: normal;
+    white-space: normal;
+}
+.ud-block-list {
+    padding: 0.8rem 0;
+}
