@@ -15,7 +15,8 @@
     padding: 0 25px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-direction: row;
+    // justify-content: space-between;
 }
 .header-left {
     display: flex;
@@ -24,11 +25,16 @@
     display: flex;
 }
 
-.category {
-    margin-left: 25px;
-    display: flex;
-    align-items: center;
-}
+// .category-text,
+// .nav-text {
+//     // color: #2d2f31;
+//     // &:hover {
+//     //     color: #401b9c;
+//     // }
+// }
 
-.category-text {
+.actions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }

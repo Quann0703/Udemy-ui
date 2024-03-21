@@ -1,0 +1,28 @@
+.wrapper {
+    + .wrapper {
+        margin-left: 10px;
+    }
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.2rem 0;
+    user-select: none;
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+.outline {
+    padding: 0 1.2rem;
+    margin: 1.2rem 0;
+}
+
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
+.icon {
+    display: inline-block;
+    width: 24px;
+    text-align: center;
+}

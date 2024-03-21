@@ -7,7 +7,15 @@ import Image from '~/components/Image';
 const cx = classNames.bind(styles);
 function CourseSearchItem() {
     return (
-        <Link to={`/`} className={cx('wrapper', 'ud-block-list-item', 'ud-block-list')}>
+        <Link
+            to={`/`}
+            className={cx(
+                'wrapper',
+                'ud-block-list-item',
+                'ud-block-list',
+                'ud-search-form-autocomplete-suggestion-block-list-item',
+            )}
+        >
             <Image
                 className={cx('img-course')}
                 src="https://img-c.udemycdn.com/course/50x50/4467252_61d1_2.jpg"
