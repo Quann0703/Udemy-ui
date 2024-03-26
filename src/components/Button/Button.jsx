@@ -42,7 +42,7 @@ function Button({
             }
         });
     }
-    console.log(className);
+
     const classes = cx('wrapper', 'ud-btn', {
         btnText,
         disabled,
@@ -55,7 +55,8 @@ function Button({
     return (
         <Comp className={classes} {...props}>
             {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
-            <span className={cx('title')}>{children}</span>
+            {/* <div className={cx('title')}>{children}</div> */}
+            {children}
             {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
         </Comp>
     );

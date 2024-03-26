@@ -22,7 +22,7 @@ function Search() {
     return (
         <HeadLessTippy
             interactive
-            visible={searchResult.length > 0}
+            // visible={searchResult.length > 0}
             appendTo={() => document.body}
             offset={[0, 5]}
             render={(attrs) => (

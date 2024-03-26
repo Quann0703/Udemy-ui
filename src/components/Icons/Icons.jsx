@@ -8,7 +8,6 @@ export const HeartIcon = ({ width = '2.5rem', height = '2.5rem', className }) =>
         viewBox="0 0 24 24"
         strokeWidth="1.5"
         stroke="currentColor"
-        class="w-6 h-6"
     >
         <path
             strokeLinecap="round"
@@ -18,7 +17,7 @@ export const HeartIcon = ({ width = '2.5rem', height = '2.5rem', className }) =>
     </svg>
 );
 
-export const CartIcon = ({ width = '2.5rem', height = '2.5rem', className }) => (
+export const CartIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
     <svg
         className={className}
         width={width}
@@ -27,13 +26,8 @@ export const CartIcon = ({ width = '2.5rem', height = '2.5rem', className }) => 
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth="1.5"
-        stroke="currentColor"
     >
-        <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-        />
+        <path d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49A.996.996 0 0020.01 4H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45zM6.16 6h12.15l-2.76 5H8.53L6.16 6zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path>
     </svg>
 );
 export const SearchIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
