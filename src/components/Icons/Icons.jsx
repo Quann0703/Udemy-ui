@@ -67,3 +67,21 @@ export const UploadIcon = ({ width = '1.9rem', height = '2.1rem', className }) =
         ></path>
     </svg>
 );
+export const ArrowIcon = ({ width = '3.6rem', height = '8rem', classNames }) => (
+    <svg
+        width={width}
+        height={height}
+        className={classNames}
+        viewBox="0 0 36 8"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M0 8h6.686a8 8 0 0 0 5.657-2.343l4.95-4.95a1 1 0 0 1 1.414 0l4.95 4.95A8 8 0 0 0 29.314 8H36 0z"
+            fill="#545454"
+            fillOpacity=".92"
+        />
+    </svg>
+);

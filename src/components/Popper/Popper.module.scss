@@ -1,11 +1,18 @@
 .wrapper {
     width: 100%;
+    position: relative;
     background: #fff;
     border: 1px solid #d1d7dc;
     box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
     border-radius: 8px;
     max-height: min(calc((100vh - 96px) - 60px), 734px);
     min-height: 100px;
-
+    overflow: visible;
     padding-top: 0.8rem;
+}
+
+.arrow {
+    position: absolute;
+    top: -5%;
+    left: 50%;
 }

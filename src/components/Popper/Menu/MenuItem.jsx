@@ -6,7 +6,7 @@ import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
-function MenuItem({ data }) {
+function MenuItem({ data, onClick }) {
     return (
         <Button
             secondary={cx('ud-btn-ghost')}
@@ -18,6 +18,7 @@ function MenuItem({ data }) {
                 'ud-block-list-item-neutral',
                 'menu-item',
             )}
+            onClick={onClick}
         >
             <div className={cx('menu-content', 'ud-block-list-item-content')}>{data.title}</div>
             <div className={cx('sub-item')}>

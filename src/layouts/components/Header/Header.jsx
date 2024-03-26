@@ -53,6 +53,15 @@ const UDEMYTEACH = {
     text: 'Turn what you know into an opportunity and reach millions around the world.',
     textBtn: 'Tìm Hiểu Thêm',
 };
+
+const handleMenuChange = (menuItem) => {
+    switch (menuItem.type) {
+        case 'language':
+            //handle change language
+            break;
+        default:
+    }
+};
 function Header() {
     return (
         <header className={cx('wrapper')}>
@@ -115,7 +124,7 @@ function Header() {
                         <span>sign up</span>
                     </Button>
 
-                    <Menu items={MENU_ITEMS}>
+                    <Menu items={MENU_ITEMS} onChange={handleMenuChange}>
                         <button className={cx('more-btn')}>
                             <FontAwesomeIcon icon={faEllipsisVertical} />
                         </button>
