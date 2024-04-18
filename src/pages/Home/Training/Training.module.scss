@@ -1,0 +1,86 @@
+.background-training {
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    background: 0 0;
+    border: 1px solid #d1d7dc;
+}
+.training-banner-dark {
+    background-color: #2d2f31;
+    border: none;
+    color: var(--color-white);
+}
+.advertising-banner-text {
+    flex-grow: 1;
+    margin-right: 2.4rem;
+}
+.advertising-notice-text {
+    display: inline;
+    margin-right: 0.8rem;
+}
+.submit-btn,
+.cancellation-btn {
+    margin: 0;
+}
+.title {
+    margin: 0 0 0.8rem;
+}
+.subtitle {
+    margin-left: 0.4rem;
+}
+.advertising-banner-button {
+    flex-shrink: 0;
+    margin-top: 1.6rem;
+    display: flex;
+    align-items: center;
+}
+
+.advertising-banner-button > :not(:first-child) {
+    margin: 0.8rem 0 0;
+}
+
+@media (min-width: 37.56rem) {
+    .advertising-banner-button > :not(:first-child) {
+        margin: 0 0 0 0.8rem;
+    }
+}
+
+.submit-btn {
+    width: 100%;
+}
+.cancellation-btn {
+    margin: 0.8rem 0 0;
+}
+@media (min-width: 43.81rem) {
+    .advertising-banner-button {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 37.56rem) {
+    .submit-btn,
+    .cancellation-btn {
+        width: auto;
+    }
+}
+
+@media (min-width: 43.81rem) {
+    .backgruond-training {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .advertising-banner-module--action-buttons--mkN41 {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 43.81rem) {
+    .background-training {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}

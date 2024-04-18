@@ -1,0 +1,21 @@
+.home-page {
+    width: 100%;
+}
+
+.home-partners {
+    background-color: #f7f9fa;
+}
+.home-page-title {
+    margin-bottom: 1.6rem;
+}
+@media (min-width: 37.56rem) {
+    .home-page-title {
+        margin-bottom: 2.4rem;
+        font-family: var(--font-stack-heading-serif);
+        font-weight: 700;
+        font-size: 3.2rem;
+        line-height: 1.25;
+        letter-spacing: -0.016rem;
+        max-width: 36em;
+    }
+}

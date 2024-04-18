@@ -1,0 +1,177 @@
+.paid-course-landing-page__container {
+    position: relative;
+}
+
+.paid-course-landing-page__container p,
+.paid-course-landing-page__container h1,
+.paid-course-landing-page__container h2,
+.paid-course-landing-page__container h3,
+.paid-course-landing-page__container h4,
+.paid-course-landing-page__container h5,
+.paid-course-landing-page__container h6,
+.paid-course-landing-page__container ul,
+.paid-course-landing-page__container ol {
+    max-width: 108.4rem;
+}
+
+@media (min-width: 73.75em) {
+    .paid-course-landing-page__container p,
+    .paid-course-landing-page__container h1,
+    .paid-course-landing-page__container h2,
+    .paid-course-landing-page__container h3,
+    .paid-course-landing-page__container h4,
+    .paid-course-landing-page__container h5,
+    .paid-course-landing-page__container h6,
+    .paid-course-landing-page__container ul,
+    .paid-course-landing-page__container ol {
+        max-width: 118.4rem;
+    }
+
+    .paid-course-landing-page__container .course-landing-page__shortcut_navigation,
+    .paid-course-landing-page__container .course-landing-page__main-content {
+        max-width: 70rem;
+    }
+
+    .paid-course-landing-page__container .course-landing-page_sidebar-container {
+        margin-left: 79.6rem;
+    }
+}
+
+.paid-course-landing-page__container .course-landing-page__shortcut_navigation,
+.paid-course-landing-page__container .course-landing-page__main-content {
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
+}
+
+.paid-course-landing-page__container .course-landing-page__nav_container {
+    display: block;
+}
+
+.paid-course-landing-page__container .top-container {
+    padding-top: 0.8rem;
+}
+
+.paid-course-landing-page__container .background-inner-position-container {
+    margin: 0 auto;
+    max-width: 108.4rem;
+}
+.paid-course-landing-page__container .course-landing-page_sidebar-container {
+    margin-left: 79.6rem;
+}
+
+@media (min-width: 67.5em) {
+    .paid-course-landing-page__container .dark-background {
+        background-color: #2d2f31;
+        padding: 3.2rem 0;
+    }
+
+    .paid-course-landing-page__container .white-background {
+        background-color: #fff;
+        padding: 3.2rem 0;
+    }
+
+    .paid-course-landing-page__container .grey-background {
+        background-color: #f7f9fa;
+        padding: 3.2rem 0;
+    }
+
+    .paid-course-landing-page__container .top-container-endorsed {
+        padding-bottom: 2.4rem;
+    }
+
+    .paid-course-landing-page__container .course-landing-page__shortcut_navigation,
+    .paid-course-landing-page__container .course-landing-page__main-content {
+        max-width: 60rem;
+        margin-left: 4.8rem;
+        margin-right: 4.8rem;
+    }
+
+    .paid-course-landing-page__container .course-landing-page__topic-menu {
+        max-width: 60rem;
+        margin: 0 4.8rem 1.6rem;
+    }
+
+    .paid-course-landing-page__container .course-landing-page__topic-menu .topic-menu {
+        position: relative;
+        top: -0.8rem;
+    }
+
+    .paid-course-landing-page__container .course-landing-page__topic-menu-endorsed {
+        margin-bottom: 0;
+    }
+
+    .paid-course-landing-page__container .course-landing-page__introduction-asset__main {
+        display: none;
+    }
+
+    .paid-course-landing-page__container .course-landing-page__purchase-section__main {
+        display: none;
+    }
+
+    .paid-course-landing-page__container .ud-clp-list-price,
+    .paid-course-landing-page__container .ud-clp-percent-discount {
+        font-size: 1.6rem;
+    }
+
+    .paid-course-landing-page__container .course-landing-page_sidebar-container {
+        display: block;
+        position: absolute;
+        top: 3.2rem;
+        margin-left: 69.6rem;
+    }
+    .paid-course-landing-page__container .course-landing-page_sidebar-container {
+        display: block;
+        position: absolute;
+        top: 3.2rem;
+        margin-left: 69.6rem;
+    }
+}
+@media screen and (min-width: 73.75em) {
+    .paid-course-landing-page__container .background-inner-position-container {
+        max-width: 118.4rem;
+    }
+}
+@media (min-width: 37.56rem) and (max-width: 67.44em) {
+    .clp-lead .clp-lead__element-meta .clp-lead__element-item:not(:empty) {
+        margin-bottom: 0.8rem;
+    }
+}
+
+@media (min-width: 67.5em) {
+    .clp-lead .clp-lead__element-meta {
+        align-items: center;
+        flex-direction: row;
+    }
+}
+@media screen and (min-width: 73.75em) {
+    .paid-course-landing-page__container .sidebar-container-position-manager {
+        max-width: 118.4rem;
+    }
+}
+
+.paid-course-landing-page__container .sidebar-container-position-manager {
+    margin: 0 auto;
+    max-width: 108.4rem;
+    height: 1000px;
+}
+
+.course-landing-page_sidebar-container.sidebar-container--fixed {
+    position: fixed;
+    top: 1.6rem;
+    z-index: 3;
+    animation: sidebar-container--fade-in--To5-l 250ms linear 250ms forwards;
+}
+.course-landing-page_sidebar-container.sidebar-container--fixed--1Gxn0 .sidebar-container--introduction-asset--CD5Yt {
+    display: none;
+}
+@media screen and (min-width: 73.75em) {
+    .course-landing-page_sidebar-container.sidebar-container--fixed {
+        margin-left: 69.6rem;
+    }
+}
+@media (min-width: 67.5em) {
+    .generic-purchase-main:not(.sidebar-container--fixed) .slider-menu {
+        transition: transform 150ms cubic-bezier(0.2, 0, 1, 0.9) 250ms;
+        transform: translateY(-100%);
+    }
+}

@@ -116,7 +116,7 @@ input,
     border: none;
 }
 a {
-    color: var(--text-color);
+    color: #5624d0;
     text-decoration: none;
 }
 // Custom tippy tooltip
@@ -178,4 +178,67 @@ a:focus,
 input:focus,
 button:focus {
     outline: none;
+}
+
+img,
+picture {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+//cusstome slick
+.slick-next:before {
+    content: '';
+}
+.slick-prev:before {
+    content: '';
+}
+.slick-prev {
+    left: 1.6rem;
+    z-index: 100;
+}
+.slick-next {
+    right: 3.6rem;
+}
+
+.slick-prev-topic {
+    left: -2.4rem;
+    z-index: 100;
+    ::before {
+        content: '';
+    }
+}
+.slick-next-topic {
+    right: -0.4rem;
+    ::before {
+        content: '';
+    }
+}
+
+.slick-prev,
+.slick-prev-topic,
+.slick-next-topic,
+.slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 40%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.svg-inline--fa {
+    display: var(--fa-display, inline-block);
+    height: 2rem;
+    width: 14px;
+    overflow: visible;
+    vertical-align: -0.125em;
 }

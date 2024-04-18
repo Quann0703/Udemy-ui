@@ -1,0 +1,547 @@
+{
+    "home": {
+        "newCourse": [
+            {
+                "id": 1,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/5316412_a0dd.jpg",
+                "title": "HTML CSS Master - Nắm chắc toàn bộ kiến thức HTML CSS A-Z",
+                "teach": "Evon Dev",
+                "rate": "5,0",
+                "places": "4261 Xếp hạng",
+                "feeCourse": "699.000",
+                "describe": "Nắm vững toàn bộ kiến thức HTML CSS từ cơ bản đến nâng cao thông qua dự án thực tế. Code nhanh và chuẩn với PUG SASS",
+                "language": "Vietnamese",
+                "student": "13"
+            },
+            {
+                "id": 2,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/4993934_0107_4.jpg",
+                "title": "Crash Course: Build a Full-Stack Web App in a Weekend!",
+                "teach": "Jonas Schmedtmann",
+                "rate": "4,8",
+                "places": "2.198 Xếp hạng",
+                "feeCourse": "1.799.000",
+                "describe": "A quick, fun, and hands-on introduction to web development. Build a complete app with HTML, CSS, JavaScript, and React!",
+                "language": "Tiếng Anh",
+                "student": "16.511"
+            },
+            {
+                "id": 3,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/5620946_7c11.jpg",
+                "title": "React & TypeScript - The Practical Guide",
+                "teach": "Maximilian Schwarzmüller",
+                "rate": "4,8",
+                "places": "4261 Xếp hạng",
+                "feeCourse": "1.099.000",
+                "describe": "Build type-safe React apps & use TypeScript to enhance your components, state management, Redux & side effects code.",
+                "language": "Tiếng Anh",
+                "student": "5.536"
+            },
+            {
+                "id": 4,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/1672410_9ff1_5.jpg",
+                "title": "Node.js, Express, MongoDB & More: The Complete Bootcamp 2024",
+                "teach": "Jonas Schmedtmann",
+                "rate": "4,7",
+                "places": "21.368 Xếp hạng",
+                "feeCourse": "2.299.000",
+                "describe": "Master Node by building a real-world RESTful API and web app (with authentication, Node.js security, payments & more)",
+                "language": "Tiếng Anh",
+                "student": "129.720"
+            },
+            {
+                "id": 6,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/1026604_790b_2.jpg",
+                "title": "Advanced CSS and Sass: Flexbox, Grid, Animations and More!",
+                "teach": "Jonas Schmedtmann",
+                "rate": "4,7",
+                "places": "42.663 Xếp hạng",
+                "feeCourse": "1.899.000",
+                "describe": "The most advanced and modern CSS course on the internet: master flexbox, CSS Grid, responsive design, and so much more.",
+                "language": "Tiếng Anh",
+                "student": "203.597"
+            }
+        ],
+        "courseTeach": [
+            {
+                "id": 2,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/4993934_0107_4.jpg",
+                "title": "Crash Course: Build a Full-Stack Web App in a Weekend!",
+                "teach": "Jonas Schmedtmann",
+                "rate": "4,8",
+                "places": "2.198 Xếp hạng",
+                "feeCourse": "1.799.000",
+                "describe": "A quick, fun, and hands-on introduction to web development. Build a complete app with HTML, CSS, JavaScript, and React!",
+                "language": "Tiếng Anh",
+                "student": "16.511"
+            },
+            {
+                "id": 4,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/1672410_9ff1_5.jpg",
+                "title": "Node.js, Express, MongoDB & More: The Complete Bootcamp 2024",
+                "teach": "Jonas Schmedtmann",
+                "rate": "4,7",
+                "places": "21.368 Xếp hạng",
+                "feeCourse": "2.299.000",
+                "describe": "Master Node by building a real-world RESTful API and web app (with authentication, Node.js security, payments & more)",
+                "language": "Tiếng Anh",
+                "student": "129.720"
+            },
+            {
+                "id": 6,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/1026604_790b_2.jpg",
+                "title": "Advanced CSS and Sass: Flexbox, Grid, Animations and More!",
+                "teach": "Jonas Schmedtmann",
+                "rate": "4,7",
+                "places": "42.663 Xếp hạng",
+                "feeCourse": "1.899.000",
+                "describe": "The most advanced and modern CSS course on the internet: master flexbox, CSS Grid, responsive design, and so much more.",
+                "language": "Tiếng Anh",
+                "student": "203.597"
+            },
+            {
+                "id": 12,
+                "courseImg": "https://img-b.udemycdn.com/course/750x422/473160_d929_3.jpg",
+                "title": "Web Design for Web Developers: Build Beautiful Websites!",
+                "teach": "Jonas Schmedtmann",
+                "rate": "4.5",
+                "feeCourse": "0",
+                "places": "38056 Xếp hạng",
+                "describe": "Learn web design in 1 hour with 25+ simple-to-use rules and guidelines — tons of amazing web design resources included!",
+                "language": "Tiếng Anh",
+                "student": "701.077"
+            },
+            {
+                "id": 13,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/437398_46c3_10.jpg",
+                "title": "Build Responsive Real-World Websites with HTML and CSS",
+                "teach": "Jonas Schmedtmann",
+                "rate": "4.7",
+                "feeCourse": "299.000",
+                "places": "102077 Xếp hạng",
+                "describe": "Learn modern HTML5, CSS3 and web design by building a stunning website for your portfolio! Includes flexbox and CSS Grid",
+                "language": "Tiếng Anh",
+                "student": "404.324"
+            }
+        ],
+        "courseFree": [
+            {
+                "id": 7,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/164058_e914_2.jpg",
+                "title": "The Ultimate Excel Programmer Course",
+                "teach": "Daniel Strong",
+                "rate": "4,6",
+                "feeCourse": "0",
+                "places": "16742 Xếp hạng",
+                "describe": "Learn Excel VBA from Scratch with Dan Strong, Bestselling Excel Expert with Over 180K Students Worldwide!",
+                "language": "Tiếng Anh",
+                "student": "119.788"
+            },
+            {
+                "id": 8,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/69414_399d_9.jpg",
+                "title": "Creating a Responsive HTML Email",
+                "teach": "Chris Converse",
+                "rate": "4,4",
+                "feeCourse": "0",
+                "places": "16749 Xếp hạng",
+                "describe": "Create attractive, responsive, HTML Emails, that work in over 30 combinations of the most commonly used email clients.",
+                "language": "Tiếng Anh",
+                "student": "7.046"
+            },
+            {
+                "id": 9,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/4258358_2ecc_3.jpg",
+                "title": "Cấu trúc dữ liệu và giải thuật Thực chiến với LeetCode",
+                "teach": "Công Hoàng Văn",
+                "rate": "4,8",
+                "feeCourse": "0",
+                "places": "55 Xếp hạng",
+                "describe": "Data Structures and Algorithms",
+                "language": "Vietnamese",
+                "student": "554"
+            },
+            {
+                "id": 10,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/4903588_a841_5.jpg",
+                "title": "Khoá học Javascript từ cơ bản đến chuyên sâu",
+                "teach": "Phạm Ngọc Hòa",
+                "rate": "4,8",
+                "feeCourse": "0",
+                "places": "15 Xếp hạng",
+                "describe": "Kiến thức từ cơ bản đến nâng cao - Thực hành các dự án game, dự án thương mại điện tử",
+                "language": "Vietnamese",
+                "student": "38"
+            },
+            {
+                "id": 11,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/5610834_7368.jpg",
+                "title": "Laravel 10 Develop a Directory Listing Website From Scratch",
+                "teach": "Web Solution US",
+                "rate": "5.0",
+                "feeCourse": "0",
+                "places": "32 Xếp hạng",
+                "describe": "Kiến thức từ cơ bản đến nâng cao - Thực hành các dự án game, dự án thương mại điện tử",
+                "language": "Tiếng Anh",
+                "student": "1309"
+            }
+        ],
+        "courseLanguage": [
+            {
+                "id": 1,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/5316412_a0dd.jpg",
+                "title": "HTML CSS Master - Nắm chắc toàn bộ kiến thức HTML CSS A-Z",
+                "teach": "Evon Dev",
+                "rate": "5,0",
+                "feeCourse": "699.000",
+                "describe": "Nắm vững toàn bộ kiến thức HTML CSS từ cơ bản đến nâng cao thông qua dự án thực tế. Code nhanh và chuẩn với PUG SASS",
+                "language": "Vietnamese",
+                "places": "4261 Xếp hạng",
+                "student": "13"
+            },
+            {
+                "id": 9,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/4258358_2ecc_3.jpg",
+                "title": "Cấu trúc dữ liệu và giải thuật Thực chiến với LeetCode",
+                "teach": "Công Hoàng Văn",
+                "rate": "4,8",
+                "feeCourse": "0",
+                "places": "55 Xếp hạng",
+                "describe": "Data Structures and Algorithms",
+                "language": "Vietnamese",
+                "student": "554"
+            },
+            {
+                "id": 10,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/4903588_a841_5.jpg",
+                "title": "Khoá học Javascript từ cơ bản đến chuyên sâu",
+                "teach": "Phạm Ngọc Hòa",
+                "rate": "4,8",
+                "feeCourse": "0",
+                "places": "15 Xếp hạng",
+                "describe": "Kiến thức từ cơ bản đến nâng cao - Thực hành các dự án game, dự án thương mại điện tử",
+                "language": "Vietnamese",
+                "student": "38"
+            }
+        ],
+        "coursePro": [
+            {
+                "id": 1,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/5316412_a0dd.jpg",
+                "title": "HTML CSS Master - Nắm chắc toàn bộ kiến thức HTML CSS A-Z",
+                "teach": "Evon Dev",
+                "rate": "5,0",
+                "feeCourse": "699.000",
+                "describe": "Nắm vững toàn bộ kiến thức HTML CSS từ cơ bản đến nâng cao thông qua dự án thực tế. Code nhanh và chuẩn với PUG SASS",
+                "language": "Vietnamese",
+                "student": "13"
+            },
+            {
+                "id": 2,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/4993934_0107_4.jpg",
+                "title": "Crash Course: Build a Full-Stack Web App in a Weekend!",
+                "teach": "Jonas Schmedtmann",
+                "rate": "4,8",
+                "places": "2.198 Xếp hạng",
+                "feeCourse": "1.799.000",
+                "describe": "A quick, fun, and hands-on introduction to web development. Build a complete app with HTML, CSS, JavaScript, and React!",
+                "language": "Tiếng Anh",
+                "student": "16.511"
+            },
+            {
+                "id": 3,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/5620946_7c11.jpg",
+                "title": "React & TypeScript - The Practical Guide",
+                "teach": "Maximilian Schwarzmüller",
+                "rate": "4,8",
+                "places": "4261 Xếp hạng",
+                "feeCourse": "1.099.000",
+                "describe": "Build type-safe React apps & use TypeScript to enhance your components, state management, Redux & side effects code.",
+                "language": "Tiếng Anh",
+                "student": "5.536"
+            },
+            {
+                "id": 4,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/1672410_9ff1_5.jpg",
+                "title": "Node.js, Express, MongoDB & More: The Complete Bootcamp 2024",
+                "teach": "Jonas Schmedtmann",
+                "rate": "4,7",
+                "places": "21.368 Xếp hạng",
+                "feeCourse": "2.299.000",
+                "describe": "Master Node by building a real-world RESTful API and web app (with authentication, Node.js security, payments & more)",
+                "language": "Tiếng Anh",
+                "student": "129.720"
+            },
+            {
+                "id": 6,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/1026604_790b_2.jpg",
+                "title": "Advanced CSS and Sass: Flexbox, Grid, Animations and More!",
+                "teach": "Jonas Schmedtmann",
+                "rate": "4,7",
+                "places": "42.663 Xếp hạng",
+                "feeCourse": "1.899.000",
+                "describe": "The most advanced and modern CSS course on the internet: master flexbox, CSS Grid, responsive design, and so much more.",
+                "language": "Tiếng Anh",
+                "student": "203.597"
+            }
+        ],
+        "courseHot": [
+            {
+                "id": 1,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/5316412_a0dd.jpg",
+                "title": "HTML CSS Master - Nắm chắc toàn bộ kiến thức HTML CSS A-Z",
+                "teach": "Evon Dev",
+                "rate": "5,0",
+                "feeCourse": "699.000",
+                "describe": "Nắm vững toàn bộ kiến thức HTML CSS từ cơ bản đến nâng cao thông qua dự án thực tế. Code nhanh và chuẩn với PUG SASS",
+                "language": "Vietnamese",
+                "student": "13"
+            },
+            {
+                "id": 1,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/5316412_a0dd.jpg",
+                "title": "HTML CSS Master - Nắm chắc toàn bộ kiến thức HTML CSS A-Z",
+                "teach": "Evon Dev",
+                "rate": "5,0",
+                "feeCourse": "699.000",
+                "describe": "Nắm vững toàn bộ kiến thức HTML CSS từ cơ bản đến nâng cao thông qua dự án thực tế. Code nhanh và chuẩn với PUG SASS",
+                "language": "Vietnamese",
+                "student": "13"
+            },
+            {
+                "id": 1,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/5316412_a0dd.jpg",
+                "title": "HTML CSS Master - Nắm chắc toàn bộ kiến thức HTML CSS A-Z",
+                "teach": "Evon Dev",
+                "rate": "5,0",
+                "feeCourse": "699.000",
+                "describe": "Nắm vững toàn bộ kiến thức HTML CSS từ cơ bản đến nâng cao thông qua dự án thực tế. Code nhanh và chuẩn với PUG SASS",
+                "language": "Vietnamese",
+                "student": "13"
+            },
+            {
+                "id": 1,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/5316412_a0dd.jpg",
+                "title": "HTML CSS Master - Nắm chắc toàn bộ kiến thức HTML CSS A-Z",
+                "teach": "Evon Dev",
+                "rate": "5,0",
+                "feeCourse": "699.000",
+                "describe": "Nắm vững toàn bộ kiến thức HTML CSS từ cơ bản đến nâng cao thông qua dự án thực tế. Code nhanh và chuẩn với PUG SASS",
+                "language": "Vietnamese",
+                "student": "13"
+            },
+            {
+                "id": 1,
+                "courseImg": "https://img-b.udemycdn.com/course/240x135/5316412_a0dd.jpg",
+                "title": "HTML CSS Master - Nắm chắc toàn bộ kiến thức HTML CSS A-Z",
+                "teach": "Evon Dev",
+                "rate": "5,0",
+                "feeCourse": "699.000",
+                "describe": "Nắm vững toàn bộ kiến thức HTML CSS từ cơ bản đến nâng cao thông qua dự án thực tế. Code nhanh và chuẩn với PUG SASS",
+                "language": "Vietnamese",
+                "student": "13"
+            }
+        ]
+    },
+    "account": [
+        {
+            "id": 1,
+            "userName": "trannam",
+            "passWord": "123",
+            "email": "trannam@gmail.com",
+            "fullName": "Trần Văn Nam"
+        },
+        {
+            "id": 2,
+            "userName": "tranquan",
+            "passWord": "123",
+            "email": "tranquan@gmail.com",
+            "fullName": "Trần Văn Quân"
+        },
+        {
+            "id": 3,
+            "userName": "tranhoan",
+            "passWord": "123",
+            "email": "tranhoan@gmail.com",
+            "fullName": "Trần Đình Hoàn"
+        },
+        {
+            "userName": "baquan",
+            "passWord": "123",
+            "email": "baquan@gmail.com",
+            "fullName": "Tran Ba Minh Quan",
+            "createdAt": 1702638346698,
+            "id": 4
+        },
+        {
+            "username": "trannam",
+            "password": "123",
+            "createdAt": 1704328685906,
+            "id": 5
+        },
+        {
+            "username": "trannam",
+            "password": "123",
+            "createdAt": 1704337452619,
+            "id": 6
+        }
+    ],
+    "course": [
+        {
+            "id": 1,
+            "courseImg": "https://img-b.udemycdn.com/course/240x135/5316412_a0dd.jpg",
+            "title": "HTML CSS Master - Nắm chắc toàn bộ kiến thức HTML CSS A-Z",
+            "teach": "Evon Dev",
+            "rate": "5,0",
+            "places": "4261 Xếp hạng",
+            "feeCourse": "699.000",
+            "describe": "Nắm vững toàn bộ kiến thức HTML CSS từ cơ bản đến nâng cao thông qua dự án thực tế. Code nhanh và chuẩn với PUG SASS",
+            "language": "Vietnamese",
+            "student": "13"
+        },
+        {
+            "id": 2,
+            "courseImg": "https://img-b.udemycdn.com/course/240x135/4993934_0107_4.jpg",
+            "title": "Crash Course: Build a Full-Stack Web App in a Weekend!",
+            "teach": "Jonas Schmedtmann",
+            "rate": "4,8",
+            "places": "2.198 Xếp hạng",
+            "feeCourse": "1.799.000",
+            "describe": "A quick, fun, and hands-on introduction to web development. Build a complete app with HTML, CSS, JavaScript, and React!",
+            "language": "Tiếng Anh",
+            "student": "16.511"
+        },
+        {
+            "id": 3,
+            "courseImg": "https://img-b.udemycdn.com/course/240x135/5620946_7c11.jpg",
+            "title": "React & TypeScript - The Practical Guide",
+            "teach": "Maximilian Schwarzmüller",
+            "rate": "4,8",
+            "places": "4261 Xếp hạng",
+            "feeCourse": "1.099.000",
+            "describe": "Build type-safe React apps & use TypeScript to enhance your components, state management, Redux & side effects code.",
+            "language": "Tiếng Anh",
+            "student": "5.536"
+        },
+        {
+            "id": 4,
+            "courseImg": "https://img-b.udemycdn.com/course/240x135/1672410_9ff1_5.jpg",
+            "title": "Node.js, Express, MongoDB & More: The Complete Bootcamp 2024",
+            "teach": "Jonas Schmedtmann",
+            "rate": "4,7",
+            "places": "21.368 Xếp hạng",
+            "feeCourse": "2.299.000",
+            "describe": "Master Node by building a real-world RESTful API and web app (with authentication, Node.js security, payments & more)",
+            "language": "Tiếng Anh",
+            "student": "129.720"
+        },
+        {
+            "id": 6,
+            "courseImg": "https://img-b.udemycdn.com/course/240x135/1026604_790b_2.jpg",
+            "title": "Advanced CSS and Sass: Flexbox, Grid, Animations and More!",
+            "teach": "Jonas Schmedtmann",
+            "rate": "4,7",
+            "places": "42.663 Xếp hạng",
+            "feeCourse": "1.899.000",
+            "describe": "The most advanced and modern CSS course on the internet: master flexbox, CSS Grid, responsive design, and so much more.",
+            "language": "Tiếng Anh",
+            "student": "203.597"
+        },
+        {
+            "id": 7,
+            "courseImg": "https://img-b.udemycdn.com/course/240x135/164058_e914_2.jpg",
+            "title": "The Ultimate Excel Programmer Course",
+            "teach": "Daniel Strong",
+            "rate": "4,6",
+            "feeCourse": "0",
+            "places": "16742 Xếp hạng",
+            "describe": "Learn Excel VBA from Scratch with Dan Strong, Bestselling Excel Expert with Over 180K Students Worldwide!",
+            "language": "Tiếng Anh",
+            "student": "119.788"
+        },
+        {
+            "id": 8,
+            "courseImg": "https://img-b.udemycdn.com/course/240x135/69414_399d_9.jpg",
+            "title": "Creating a Responsive HTML Email",
+            "teach": "Chris Converse",
+            "rate": "4,4",
+            "feeCourse": "0",
+            "places": "16749 Xếp hạng",
+            "describe": "Create attractive, responsive, HTML Emails, that work in over 30 combinations of the most commonly used email clients.",
+            "language": "Tiếng Anh",
+            "student": "7.046"
+        },
+        {
+            "id": 9,
+            "courseImg": "https://img-b.udemycdn.com/course/240x135/4258358_2ecc_3.jpg",
+            "title": "Cấu trúc dữ liệu và giải thuật Thực chiến với LeetCode",
+            "teach": "Công Hoàng Văn",
+            "rate": "4,8",
+            "feeCourse": "0",
+            "places": "55 Xếp hạng",
+            "describe": "Data Structures and Algorithms",
+            "language": "Vietnamese",
+            "student": "554"
+        },
+        {
+            "id": 10,
+            "courseImg": "https://img-b.udemycdn.com/course/240x135/4903588_a841_5.jpg",
+            "title": "Khoá học Javascript từ cơ bản đến chuyên sâu",
+            "teach": "Phạm Ngọc Hòa",
+            "rate": "4,8",
+            "feeCourse": "0",
+            "places": "15 Xếp hạng",
+            "describe": "Kiến thức từ cơ bản đến nâng cao - Thực hành các dự án game, dự án thương mại điện tử",
+            "language": "Vietnamese",
+            "student": "38"
+        },
+        {
+            "id": 11,
+            "courseImg": "https://img-b.udemycdn.com/course/240x135/5610834_7368.jpg",
+            "title": "Laravel 10 Develop a Directory Listing Website From Scratch",
+            "teach": "Web Solution US",
+            "rate": "5.0",
+            "feeCourse": "0",
+            "places": "32 Xếp hạng",
+            "describe": "Kiến thức từ cơ bản đến nâng cao - Thực hành các dự án game, dự án thương mại điện tử",
+            "language": "Tiếng Anh",
+            "student": "1309"
+        },
+        {
+            "id": 12,
+            "courseImg": "https://img-b.udemycdn.com/course/750x422/473160_d929_3.jpg",
+            "title": "Web Design for Web Developers: Build Beautiful Websites!",
+            "teach": "Jonas Schmedtmann",
+            "rate": "4.5",
+            "feeCourse": "0",
+            "places": "38056 Xếp hạng",
+            "describe": "Learn web design in 1 hour with 25+ simple-to-use rules and guidelines — tons of amazing web design resources included!",
+            "language": "Tiếng Anh",
+            "student": "701.077"
+        },
+        {
+            "id": 13,
+            "courseImg": "https://img-b.udemycdn.com/course/240x135/437398_46c3_10.jpg",
+            "title": "Build Responsive Real-World Websites with HTML and CSS",
+            "teach": "Jonas Schmedtmann",
+            "rate": "4.7",
+            "feeCourse": "299.000",
+            "places": "102077 Xếp hạng",
+            "describe": "Learn modern HTML5, CSS3 and web design by building a stunning website for your portfolio! Includes flexbox and CSS Grid",
+            "language": "Tiếng Anh",
+            "student": "404.324"
+        },
+        {
+            "id": 14,
+            "courseImg": "https://img-b.udemycdn.com/course/240x135/4471614_361e_5.jpg",
+            "title": "The Ultimate React Course 2024: React, Redux & More",
+            "teach": "Jonas Schmedtmann",
+            "rate": "4.7",
+            "feeCourse": "299.000",
+            "places": "102077 Xếp hạng",
+            "describe": "Master modern React from beginner to advanced! Context API, React Query, Redux Toolkit, Tailwind, advanced patterns",
+            "language": "Tiếng Anh",
+            "student": "404.324"
+        }
+    ]
+}

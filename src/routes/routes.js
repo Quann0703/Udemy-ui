@@ -4,6 +4,7 @@ import Home from '~/pages/Home';
 import MyCourses from '~/pages/MyCourses';
 import Payment from '~/pages/Payment';
 import Profile from '~/pages/Profile';
+import CourseDetail from '~/pages/CourseDetail';
 
 const publicRoutes = [
     { path: config.routes.home, component: Home },
@@ -11,6 +12,7 @@ const publicRoutes = [
     { path: config.routes.cart, component: Cart },
     { path: config.routes.payment, component: Payment },
     { path: config.routes.myCourses, component: MyCourses },
+    { path: config.routes.course, component: CourseDetail },
 ];
 const privateRoutes = [];
 

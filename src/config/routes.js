@@ -5,5 +5,6 @@ const routes = {
     payment: '/payment',
     profile: '/profile',
     search: '/search',
+    course: '/course/:slug',
 };
 export default routes;

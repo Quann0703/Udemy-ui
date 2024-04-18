@@ -117,10 +117,14 @@ function Header() {
                         <CartIcon className={cx('ud-icon', 'ud-icon-color-neutral')} />
                     </Button>
 
-                    <Button secondary={cx('ud-btn-primary')} size={cx('ud-btn-medium')} className={cx('ud-heading-sm')}>
+                    <Button primary={cx('ud-btn-primary')} size={cx('ud-btn-medium')} className={cx('ud-heading-sm')}>
                         <span>sign in</span>
                     </Button>
-                    <Button primary={cx('ud-btn-secondary')} size={cx('ud-btn-medium')} className={cx('ud-heading-sm')}>
+                    <Button
+                        secondary={cx('ud-btn-secondary')}
+                        size={cx('ud-btn-medium')}
+                        className={cx('ud-heading-sm')}
+                    >
                         <span>sign up</span>
                     </Button>
 

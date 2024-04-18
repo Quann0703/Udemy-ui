@@ -1,14 +1,13 @@
 .wrapper {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
 }
 .container {
     width: 100%;
-    min-height: 400px;
     display: flex;
     justify-content: center;
 }
 .content {
-    min-height: 500px;
+    width: 100%;
 }

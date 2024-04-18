@@ -48,6 +48,7 @@ function Button({
         disabled,
         [size]: size,
         [rounded]: rounded,
+        [ghost]: ghost,
         [primary]: primary,
         [secondary]: secondary,
         [className]: className,

@@ -1,0 +1,29 @@
+.partners-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    container-type: inline-size;
+}
+.partners-content {
+    padding: 6.4rem;
+    width: 100%;
+}
+.content-heading {
+    color: #6a6f73;
+    font-weight: 400;
+    margin-bottom: 2.4rem;
+    font-size: 1.9rem;
+    max-width: 100%;
+}
+.content__logo-list {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+}
+.logo-item {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
