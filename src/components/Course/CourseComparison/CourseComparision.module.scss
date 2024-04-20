@@ -1,0 +1,106 @@
+.course__container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    padding: 1.6rem 0;
+    position: relative;
+    align-items: center;
+}
+.course__main-content {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 18rem;
+    margin: 0 0 0 0.8rem;
+    white-space: nowrap;
+}
+.main-content-title {
+    color: #2d2f31;
+    display: block !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+.main-content-info {
+    margin: 0.8rem 0 0;
+    display: flex;
+}
+.content-info-badges {
+    display: flex;
+    margin: 0 0.8rem 0 0;
+    gap: 0 0.8rem;
+    .badges-bestseller {
+        background-color: var(--color-yellow-200);
+        color: var(--color-yellow-500);
+    }
+}
+.content-info-information {
+    display: flex;
+    align-items: center;
+    .information-time {
+        font-weight: 700;
+        color: #1e6055;
+    }
+    .information-day {
+        margin-left: 10px;
+    }
+}
+.course__content-total {
+    flex: 3;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 0 0 2.4rem;
+}
+.total-star {
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    .rating-number {
+        margin-right: 0.4rem;
+        color: #4d3105;
+    }
+}
+.total-student {
+    display: flex;
+    margin: 0 1.2rem 0 1.4rem;
+}
+.total-fee {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .base-price-text {
+        margin: 0 0 0.4rem;
+        padding: 0;
+    }
+    .original-price {
+        color: #6a6f73;
+        margin: 0;
+        padding: 0;
+    }
+}
+.course__img-wrapper {
+    order: -1;
+    .course-comparison--course-image {
+        border: 1px solid #d1d7dc;
+        display: block;
+        min-width: 6.4rem;
+        width: 64px;
+        height: 50px;
+    }
+    .comparison-card-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+.course__wishlish-container {
+    margin: 0 0 0 1.6rem;
+    height: 100%;
+}

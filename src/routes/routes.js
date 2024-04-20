@@ -5,12 +5,13 @@ import MyCourses from '~/pages/MyCourses';
 import Payment from '~/pages/Payment';
 import Profile from '~/pages/Profile';
 import CourseDetail from '~/pages/CourseDetail';
+import { HeaderOnly } from '~/layouts';
 
 const publicRoutes = [
     { path: config.routes.home, component: Home },
     { path: config.routes.profile, component: Profile },
     { path: config.routes.cart, component: Cart },
-    { path: config.routes.payment, component: Payment },
+    { path: config.routes.payment, component: Payment, layout: HeaderOnly },
     { path: config.routes.myCourses, component: MyCourses },
     { path: config.routes.course, component: CourseDetail },
 ];

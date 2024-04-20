@@ -1,0 +1,87 @@
+.in-page-offset-anchor {
+    position: relative;
+    top: -5.9rem;
+}
+@media (min-width: 37.56rem) {
+    .in-page-offset-anchor {
+        top: -5.9rem;
+    }
+}
+@media (min-width: 67.5em) {
+    .in-page-offset-anchor {
+        top: -13.7rem;
+    }
+}
+.instructor__header-name-teacher {
+    margin: 0 0 1.6rem;
+}
+
+.instructor__bio {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.6rem;
+    padding: 0;
+    position: relative;
+}
+.instructor__title-name {
+    margin-bottom: 0.4rem;
+}
+.instructor__job-title {
+    color: #6a6f73;
+}
+.instructor__img-and-star {
+    margin-top: 0.8rem;
+    display: flex;
+    .instructor__img-link {
+        flex: 0 0 auto;
+        min-width: 0.1rem;
+        margin: 0 1.6rem 0 0;
+        .instructor--instructor__image {
+            //   @include ud-avatar;
+            //   @include ud-avatar-image;
+            width: 11.2rem !important;
+            height: 11.2rem !important;
+        }
+    }
+    ul {
+        // @include ud-unstyled-list;
+        li {
+            padding-left: 0;
+            .instructor__star-item {
+                // @include ud-text-sm;
+                // @include ud-block-list-item;
+                padding: 0.4rem 0;
+                color: #2d2f31;
+                .star__instructor {
+                    color: #2d2f31;
+                    margin-top: 2px;
+                }
+                .instructor__star-content {
+                    //   @include ud-block-list-item;
+                    margin-left: 1.6rem;
+                }
+            }
+        }
+    }
+}
+.instructor__decription {
+    margin-top: 10px;
+    margin-top: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+.show-more-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.instructor__decription-content {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.show-more-module--with-gradient {
+    -webkit-mask-image: linear-gradient(#ffffff, #ffffff, rgba(255, 255, 255, 0));
+}
+.limit-height {
+    max-height: 14.6rem;
+}

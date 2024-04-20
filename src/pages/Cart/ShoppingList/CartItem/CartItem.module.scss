@@ -1,0 +1,207 @@
+.style__shopping-item-wrapper {
+    padding: 1.6rem 0;
+    border-top: 1px solid #d1d7dc;
+}
+.shopping__item-with-inline {
+    grid:
+        'image header header actions price' auto
+        'image badges rating actions price' auto
+        'image meta meta actions price' auto/auto auto 1fr auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto 1fr auto auto;
+    grid-template-areas:
+        'image header header actions price'
+        'image badges rating actions price'
+        'image meta meta actions price';
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-auto-rows: auto;
+}
+.shopping__item-container {
+    position: relative;
+    display: grid;
+}
+.shopping__item-img {
+    grid-area: image;
+    .shopping__item-img-wrapper {
+        margin-right: 1.6rem;
+        background-color: #2d2f31;
+        border: 1px solid #d1d7dc;
+        overflow: hidden;
+        position: relative;
+    }
+}
+.shopping-item--course-image {
+    display: block;
+    transition: opacity linear 100ms;
+    object-fit: cover;
+    width: 4.8rem;
+    height: 4.8rem;
+}
+@media (min-width: 61.31rem) {
+    .shopping-item--course-image {
+        width: 12rem;
+        height: 6.8rem;
+    }
+}
+.shopping__item-header {
+    grid-area: header;
+    min-width: 1px;
+}
+.shopping-item--course-title {
+    display: block !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    a {
+        color: #2d2f31;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+}
+@media (min-width: 61.31rem) {
+    .shopping__item-header .shopping-item--course-title {
+        display: block !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+    }
+    .shopping__item-header .shopping__item-instructor {
+        display: block;
+    }
+}
+
+.shopping__item-instructor {
+    display: none;
+}
+.shopping-item--instructor-list {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 0.4rem;
+}
+.shopping__item-badges {
+    grid-area: badges;
+    margin-top: 0.8rem;
+    margin-right: 0.8rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    .course__badges-best-sales {
+        background-color: var(--color-yellow-200);
+        color: var(--color-yellow-500);
+    }
+    .course__badges-updated-recently {
+        background-color: var(--color-green-200);
+        color: var(--color-green-500);
+    }
+}
+.shopping__item-rating {
+    grid-area: rating;
+    margin-top: 0.8rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.star__rating-wrapper {
+    // display: inline-flex;
+    // align-items: center;
+    .rating-inner {
+        display: inline-flex;
+        align-items: center;
+    }
+    .star__rating-rank {
+        margin-right: 0.4rem;
+        color: #4d3105;
+    }
+}
+.shopping__item-review {
+    color: #6a6f73;
+    margin-left: 0.4rem;
+}
+.shopping__item-meta {
+    grid-area: meta;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-top: 0.8rem;
+    color: #6a6f73;
+    .item-meta-hourse,
+    .item-meta-number-lesson,
+    .item-meta-level {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+.shopping__item-action {
+    margin-top: 0;
+    // padding-left: 2.4rem;
+    grid-area: actions;
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    .btn-action {
+        min-width: auto;
+        margin: 0;
+        padding: 0 0.8rem;
+        height: 2.8rem;
+        color: #5624d0;
+    }
+}
+.shopping__item-price {
+    grid-area: price;
+    padding-left: 4.8rem;
+    display: flex;
+}
+
+.shopping__price-discount {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .base-price-text-module--price-part {
+        line-height: 1;
+        padding: 0.4rem 0;
+        margin-right: 0.8rem;
+        white-space: nowrap;
+    }
+    .shopping__price-part {
+        margin: 0;
+        color: #a435f0;
+    }
+    .shopping__price-current {
+        margin-right: 0;
+        color: #6a6f73;
+    }
+}
+
+.base-price-text-module--price-part:last-child {
+    margin-right: 0;
+}
+.shopping-item-coupon {
+    display: inline-block;
+    padding-top: 0.4rem;
+    margin-left: 0.4rem;
+    height: max-content;
+}
+.shopping-item-price-discounted {
+    color: #a435f0;
+}

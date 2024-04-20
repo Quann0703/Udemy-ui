@@ -1,0 +1,147 @@
+.in-page-offset-anchor {
+    position: relative;
+    top: -5.9rem;
+}
+
+@media (min-width: 37.56rem) {
+    .in-page-offset-anchor {
+        top: -5.9rem;
+    }
+}
+.curriculum-header {
+    margin-bottom: 1.6rem;
+}
+.curriculum-sub-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+}
+.curriculum-content-length {
+    margin: 0.8rem 0;
+    display: block;
+}
+.color-btn {
+    color: #5624d0;
+}
+
+.accordion-panel-module {
+    border-left: 1px solid #d1d7dc;
+    border-right: 1px solid #d1d7dc;
+}
+
+.section-panel {
+    border-top: 1px solid #d1d7dc;
+}
+
+.accordion-panel-module {
+    color: #2d2f31 !important;
+    display: block;
+    text-align: left;
+    white-space: normal;
+    width: 700px;
+    .ud-accordion-panel-toggler {
+        background-color: #f7f9fa;
+        flex-direction: row-reverse;
+        padding: 1.6rem;
+        align-items: center;
+    }
+    .ud-accordion-panel-heading,
+    .ud-accordion-panel-title {
+        display: flex;
+        flex: 1;
+    }
+}
+.section-panel .ud-accordion-panel-toggler > .ud-icon {
+    margin: 0 !important;
+}
+.accordion-panel-module-outer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.6rem 0;
+    .accordion-panel-module--expand-icon-rotate {
+        transform: rotate(-180deg);
+    }
+}
+.accordion-panel-module--expand-icon {
+    // margin-left: 1.6rem;
+    transition: transform 150ms linear;
+}
+
+@media (min-width: 37.56rem) {
+    .section-panel .ud-accordion-panel-toggler {
+        padding: 1.6rem 2.4rem;
+    }
+}
+
+.accordion-module-panel-toggler {
+    color: #2d2f31 !important;
+    display: block;
+    text-align: left;
+    white-space: normal;
+    width: 100%;
+}
+.section-title {
+    flex: 1;
+    max-width: 60rem;
+}
+@media (min-width: 37.56rem) {
+    .section-content {
+        margin-left: 2.4rem;
+    }
+}
+
+.accordion-panel-module-content-wrapper {
+    // max-height: 0;
+    // overflow: hidden;
+    // visibility: hidden;
+    max-height: none;
+    overflow: visible;
+    visibility: visible;
+}
+.ud-accordion-panel-content {
+    border-top: 1px solid #d1d7dc;
+    padding: 1.6rem 2.4rem;
+    border-bottom: 1px solid #d1d7dc;
+}
+.preview {
+    cursor: pointer;
+}
+.lesson-item {
+    padding: 0.8rem 0;
+}
+.ud-block-list-item-content,
+.section-row {
+    display: flex;
+}
+.ud-block-list-item-icon {
+    min-height: 1.96rem;
+}
+.ud-block-list-item-icon + .ud-block-list-item-content {
+    margin-left: 1.6rem;
+}
+.section-duration {
+    color: #6a6f73;
+    margin-left: 3.2rem;
+}
+@media (min-width: 37.56rem) {
+    .section--item-content-summary--Aq9em {
+        color: #6a6f73;
+        margin-left: 3.2rem;
+    }
+}
+.ud-block-list-item-content {
+    flex: 1;
+    min-width: 1px;
+}
+
+.section--preview-text {
+    text-decoration: underline;
+}
+@media (min-width: 37.56rem) {
+    .section--preview-text {
+        margin-left: 3.2rem;
+    }
+}

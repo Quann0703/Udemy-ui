@@ -1,0 +1,139 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.course-card-container {
+    display: grid;
+    position: relative;
+}
+.course-card-module--small,
+.course-card-module--large {
+    grid-template-columns: auto 1fr;
+    min-width: 22.2rem;
+    max-width: 55.2rem;
+}
+.course-card-img {
+    align-self: start;
+    background-color: #2d2f31;
+    border: 1px solid #d1d7dc;
+    overflow: hidden;
+    position: relative;
+}
+
+.course-card-main-content {
+    color: #2d2f31;
+    white-space: nowrap;
+    min-width: 1px;
+}
+.course-card-title {
+    .course-card-title-text {
+        display: block !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        a {
+            color: #2d2f31;
+        }
+    }
+    ::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+.course-card-instructors {
+    // display: block !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    color: #6a6f73;
+}
+.course-card-rating {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.star-rating-wrapper {
+    display: inline-flex;
+    align-items: center;
+}
+.rating-number {
+    margin-right: 0.4rem;
+    color: #4d3105;
+}
+.rating-review {
+    color: #6a6f73;
+    margin-left: 0.4rem;
+}
+.course-card-price {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    text-align: right;
+}
+.total-fee {
+    display: flex;
+    color: #2d2f31;
+    align-items: center;
+    flex-flow: row wrap;
+    .base-price-text {
+        line-height: 1;
+        padding: 0.4rem 0;
+        margin-right: 0.8rem;
+        white-space: nowrap;
+    }
+    .original-price {
+        color: #6a6f73;
+        margin-right: 0;
+    }
+    .bundle-course-price {
+        text-decoration: line-through;
+    }
+}
+.course-card-badges {
+    margin: 0.8rem 0 0.4rem;
+}
+.course-badges-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+}
+.badges-bestseller {
+    background-color: var(--color-yellow-200);
+    color: var(--color-yellow-500);
+}
+@media (min-width: 23.5rem) {
+    .course-card-module--small,
+    .course-card-module--large {
+        min-width: 25.6rem;
+    }
+}
+@media (min-width: 37.56rem) {
+    .course-card-module--large {
+        gap: 1.6rem;
+        min-width: 50.8rem;
+        max-width: 129.2rem;
+    }
+    .has-price-text {
+        padding-right: 9.6rem;
+    }
+    .course-card-module--large .total-fee {
+        display: block;
+    }
+    .course-card-module--large .base-price-text {
+        padding: 0;
+        margin: 0 0 0.8rem;
+    }
+}

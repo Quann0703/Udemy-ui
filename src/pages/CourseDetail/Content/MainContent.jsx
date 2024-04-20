@@ -1,5 +1,4 @@
 import classNames from 'classnames/bind';
-import PropTypes from 'prop-types';
 
 import styles from './Content.module.scss';
 import Button from '~/components/Button';
@@ -7,7 +6,7 @@ import Rating from '~/components/Rating';
 import { LanguageIcon, NewIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
-function MainContent({ data }) {
+function MainContent() {
     return (
         <div className={cx('course-landing-page__main-content')}>
             <div className={cx('ud-text-sm', 'clp-lead')}>
@@ -72,7 +71,4 @@ function MainContent({ data }) {
     );
 }
 
-MainContent.propTypes = {
-    data: PropTypes.object,
-};
 export default MainContent;

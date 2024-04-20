@@ -1,0 +1,33 @@
+.request-title {
+    margin-bottom: 1.6rem;
+}
+.ud-block-list-item-icon + .request-content {
+    margin-left: 1.6rem;
+}
+.description__header {
+    margin-bottom: 1.6rm;
+}
+.show-more-module {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.show-more-module-content {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.show-more-with-gradient {
+    -webkit-mask-image: linear-gradient(#ffffff, #ffffff, rgba(255, 255, 255, 0));
+}
+.show-more-module-focusable {
+}
+.height-limit {
+    max-height: 21.1rem;
+}
+.audience {
+    margin: 12px 0;
+}
+.audience-title {
+    margin-bottom: 1.6rem;
+}

@@ -82,8 +82,8 @@
     .paid-course-landing-page__container .course-landing-page__shortcut_navigation,
     .paid-course-landing-page__container .course-landing-page__main-content {
         max-width: 60rem;
-        margin-left: 4.8rem;
-        margin-right: 4.8rem;
+        // margin-left: 4.8rem;
+        // margin-right: 4.8rem;
     }
 
     .paid-course-landing-page__container .course-landing-page__topic-menu {
@@ -117,13 +117,7 @@
         display: block;
         position: absolute;
         top: 3.2rem;
-        margin-left: 69.6rem;
-    }
-    .paid-course-landing-page__container .course-landing-page_sidebar-container {
-        display: block;
-        position: absolute;
-        top: 3.2rem;
-        margin-left: 69.6rem;
+        margin-left: 73.6rem;
     }
 }
 @media screen and (min-width: 73.75em) {
@@ -152,7 +146,6 @@
 .paid-course-landing-page__container .sidebar-container-position-manager {
     margin: 0 auto;
     max-width: 108.4rem;
-    height: 1000px;
 }
 
 .course-landing-page_sidebar-container.sidebar-container--fixed {
@@ -161,12 +154,21 @@
     z-index: 3;
     animation: sidebar-container--fade-in--To5-l 250ms linear 250ms forwards;
 }
+@keyframes sidebar-container--fade-in--To5-l {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 .course-landing-page_sidebar-container.sidebar-container--fixed--1Gxn0 .sidebar-container--introduction-asset--CD5Yt {
     display: none;
 }
 @media screen and (min-width: 73.75em) {
     .course-landing-page_sidebar-container.sidebar-container--fixed {
-        margin-left: 69.6rem;
+        margin-left: 73.6rem;
     }
 }
 @media (min-width: 67.5em) {
@@ -174,4 +176,137 @@
         transition: transform 150ms cubic-bezier(0.2, 0, 1, 0.9) 250ms;
         transform: translateY(-100%);
     }
+}
+
+.course-landing-page_sidebar-container:not(.sidebar-container--fixed) .smart-bar-spacer {
+    display: none;
+}
+
+.sidebar-container--fixed .smart-bar-spacer {
+    visibility: hidden;
+    width: 100vw;
+    background: #2d2f31;
+}
+
+//slider menu
+.slider-menu--mark {
+    position: relative;
+    top: 0;
+}
+.slider-menu {
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.08), 0 -4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    transform: translateY(0);
+    transition: transform 250ms cubic-bezier(0, 0, 0.38, 0.9);
+}
+@media (min-width: 67.5em) {
+    .slider-menu {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.16);
+        top: 0;
+        bottom: auto;
+        padding: 0;
+    }
+}
+@media (min-width: 37.56rem) {
+    .slider-menu {
+        color: #fff;
+        background-color: #2d2f31;
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.08), 0 -4px 12px rgba(0, 0, 0, 0.16);
+        padding: 0;
+    }
+}
+
+.smart-bar-module {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.slider-menu-container-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 0.8rem 1.6rem;
+}
+
+.lead-lead {
+    display: none;
+}
+@media (min-width: 37.56rem) {
+    .lead-lead {
+        display: block;
+        margin-right: 1.6rem;
+        flex: 1;
+        min-width: 0;
+    }
+    .lead-title {
+        font-weight: 700;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-width: 0;
+        margin-bottom: 0.4rem;
+    }
+    .lead-info {
+        display: flex;
+        line-height: 1.4rem;
+    }
+    .lead-rating {
+        margin-right: 0.8rem;
+    }
+}
+
+.star-rating-module {
+    display: inline-flex;
+    align-items: center;
+}
+// .star-rating-dark-background.star-rating-number {
+//     color: #f69c08;
+// }
+.star-rating-number {
+    margin-right: 0.4rem;
+    color: #f69c08;
+}
+
+// main content
+.paid-course-landing-page__container .paid-course-landing-page__body {
+    margin: 0 auto;
+    max-width: 108.4rem;
+}
+@media screen and (min-width: 37.56rem) {
+    .paid-course-landing-page__container .paid-course-landing-page__body {
+        padding-top: 3.2rem;
+    }
+}
+@media screen and (min-width: 73.75em) {
+    .paid-course-landing-page__container .paid-course-landing-page__body {
+        max-width: 118.4rem;
+    }
+}
+.in-page-offset-anchor {
+    position: relative;
+    top: -5.9rem;
+}
+
+@media (min-width: 37.56rem) {
+    .in-page-offset-anchor {
+        top: -5.9rem;
+    }
+}
+
+@media (min-width: 67.5em) {
+    .in-page-offset-anchor {
+        top: -13.7rem;
+    }
+}
+.component-margin {
+    margin-bottom: 3.2rem;
 }

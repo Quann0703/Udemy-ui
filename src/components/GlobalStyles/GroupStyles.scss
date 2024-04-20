@@ -1153,54 +1153,18 @@
     letter-spacing: normal;
     white-space: normal;
 }
-
-.ud-block-list .ud-block-list-item {
-    padding: 0.8rem 0;
+//avatar
+.ud-avatar {
+    background: #2d2f31;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    object-fit: cover;
+    color: var(--color-white);
 }
 
-.ud-block-list .ud-block-list-item-tight {
-    padding: 0.4rem 0;
-}
-
-.ud-block-list .ud-block-list-item-loose {
-    padding: 1.6rem 0;
-}
-
-.ud-block-list-item-small .ud-block-list-item-icon,
-.ud-block-list-item-small .ud-block-list-item-content {
-    min-height: 1.96rem;
-}
-
-.ud-block-list-item-large .ud-block-list-item-icon,
-.ud-block-list-item-large .ud-block-list-item-content {
-    min-height: 2.24rem;
-}
-
-.ud-block-list .ud-block-list-item-link {
-    color: #5624d0;
-}
-
-.ud-block-list .ud-block-list-item-neutral {
-    color: #2d2f31;
-}
-
-.ud-block-list-item-content {
-    flex: 1;
-    min-width: 1px;
-}
-
-.ud-block-list-item-content-loading {
-    background: var(--color-gray-200);
-}
-
-.ud-block-list-item-icon + .ud-block-list-item-content {
-    margin-left: 1.6rem;
-}
-
-.ud-block-list-item-content + .ud-block-list-item-icon {
-    margin-left: 0.8rem;
-}
-
-.ud-block-list-item-icon.ud-notification-counter {
-    margin-top: -0.25em;
+.ud-avatar-image {
+    background: 0 0;
+    border: 1px solid #d1d7dc;
 }

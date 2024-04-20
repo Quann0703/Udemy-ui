@@ -14,5 +14,9 @@ const images = {
     citi: require('~/assets/images/citi.svg').default,
     ericsson: require('~/assets/images/ericsson.svg').default,
     coursejs: require('~/assets/images/thumb_0000.png'),
+    nasdaq: require('~/assets/images/nasdaq-dark.svg').default,
+    box: require('~/assets/images/box-dark.svg').default,
+    netApp: require('~/assets/images/netapp-dark.svg').default,
+    eventbrite: require('~/assets/images/eventbrite-dark.svg').default,
 };
 export default images;

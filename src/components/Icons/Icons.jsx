@@ -182,22 +182,6 @@ export const PlayOverlayIcon = ({ width = '3rem', height = '3rem', classNames })
     );
 };
 
-export const WishListIcon = ({ width = '3rem', height = '3rem', classNames }) => {
-    return (
-        <svg
-            width={width}
-            height={height}
-            className={classNames}
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            focusable="false"
-            viewBox="0 0 24 24"
-        >
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
-        </svg>
-    );
-};
-
 export const VideoIcon = ({ width = '3rem', height = '3rem', classNames }) => {
     return (
         <svg
@@ -290,6 +274,150 @@ export const TrophyIcon = ({ width = '3rem', height = '3rem', classNames }) => {
             viewBox="0 0 24 24"
         >
             <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94A5.01 5.01 0 0011 15.9V19H7v2h10v-2h-4v-3.1a5.01 5.01 0 003.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm7 6c-1.65 0-3-1.35-3-3V5h6v6c0 1.65-1.35 3-3 3zm7-6c0 1.3-.84 2.4-2 2.82V7h2v1z"></path>
+        </svg>
+    );
+};
+
+export const TickIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
+        </svg>
+    );
+};
+
+export const ExpandIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"></path>
+        </svg>
+    );
+};
+
+export const BulletIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M17 12a5 5 0 11-10.001-.001A5 5 0 0117 12z"></path>
+        </svg>
+    );
+};
+
+export const CollapseIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"></path>
+        </svg>
+    );
+};
+
+export const PeopleIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M16 10c1.66 0 2.99-1.34 2.99-3S17.66 4 16 4c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 4 8 4C6.34 4 5 5.34 5 7s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V20h14v-4.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V20h6v-4.5c0-2.33-4.67-3.5-7-3.5z"></path>
+        </svg>
+    );
+};
+
+export const WishListIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+        </svg>
+    );
+};
+
+export const ExpandPlusIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
+        </svg>
+    );
+};
+
+export const CertificateIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M20.39 19.37L16.38 18 15 22l-3.08-6L9 22l-1.38-4-4.01 1.37 2.92-6A6.97 6.97 0 015 9a6.999 6.999 0 1114 0c0 1.65-.57 3.17-1.53 4.37l2.92 6zM7 9l2.69 1.34-.19 3 2.5-1.66 2.5 1.65-.17-2.99L17 9l-2.68-1.35.18-2.98L12 6.31 9.5 4.65l.17 3.01L7 9z"></path>
+        </svg>
+    );
+};
+
+export const OfferIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"></path>
         </svg>
     );
 };

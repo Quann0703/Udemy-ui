@@ -1,0 +1,37 @@
+.curated-for-ufb-notice {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        'text'
+        'logos';
+    margin: 2.4rem 0;
+    display: grid;
+    padding: 1.6rem;
+    width: 700px;
+    border: 1px solid #d1d7dc;
+    span {
+        display: block;
+    }
+}
+.curated-for-ufb-text {
+    grid-area: text;
+}
+.curated-for-ufb-text-body {
+    color: #6a6f73;
+    margin-top: 0.4rem;
+}
+
+.curated-for-ufb-logos {
+    margin-top: 2.4rem;
+    grid-area: logos;
+}
+.curated-for-ufb-top-companies {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+@media (min-width: 43.81rem) {
+    .curated-for-ufb-logos {
+        text-align: start;
+    }
+}

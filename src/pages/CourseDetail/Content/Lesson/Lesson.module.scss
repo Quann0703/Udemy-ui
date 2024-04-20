@@ -1,0 +1,41 @@
+.what-you-will-learn {
+    border: 1px solid #d1d7dc;
+    padding: 2.4rem 0;
+    width: 700px;
+    .what-you-will-learn-title {
+        margin: 0 2.4rem 1.6rem;
+    }
+
+    .what-you-will-learn--content {
+        margin: 0 2.4rem;
+    }
+    .learn-objectives-list {
+        .learn--objective-item {
+            display: block !important;
+            display: -webkit-box !important;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+        }
+    }
+}
+
+@media (min-width: 37.56rem) {
+    .what-you-will-learn {
+        padding-bottom: 1.6rem;
+    }
+}
+
+@media (min-width: 37.56rem) {
+    .learn-objectives-list-two-column-layout {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .learn-objectives-list-two-column-layout li {
+        width: calc(50% - (2.4rem / 2));
+    }
+}

@@ -1,0 +1,45 @@
+.buy-box .buy-box-item .buy-box--discount {
+    margin-top: -0.4rem;
+}
+.total-price--total-label {
+    margin-bottom: 0.8rem;
+    color: #6a6f73;
+}
+
+.base-price-text {
+    line-height: 1;
+    padding: 0.4rem 0;
+    margin-right: 0.8rem;
+    white-space: nowrap;
+}
+.base-price-text:last-child {
+    margin-right: 0;
+}
+.base-original {
+    color: #6a6f73;
+}
+.buy-box-add-to-cart {
+    margin-top: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+.add-to-cart-block {
+    flex: 1;
+}
+.add-to-cart {
+    width: 100%;
+}
+.style-icon {
+    fill: transparent;
+    padding: 1px;
+    stroke: currentcolor;
+    stroke-width: 2;
+}
+.btn-express-checkout {
+    white-space: nowrap;
+    width: 100%;
+    color: var(--color-gray-500);
+    background-color: transparent;
+    border: 1px solid #2d2f31;
+}

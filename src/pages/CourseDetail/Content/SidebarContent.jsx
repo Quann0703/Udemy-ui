@@ -14,6 +14,7 @@ import {
     WishListIcon,
 } from '~/components/Icons';
 import { IncentiveItem } from '~/components/Incentive';
+import { useEffect, useState } from 'react';
 const cx = classNames.bind(styles);
 
 const LISTINCENTIVE = [
@@ -73,10 +74,30 @@ const LISTINCENTIVE = [
     },
 ];
 function SidebarContent({ data }) {
+    const [none, setNone] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            if (scrollPosition > 400) {
+                setNone(true);
+            } else {
+                setNone(false);
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+    console.log(none);
     return (
         <div className={cx('sidebar-container--content')}>
             <div className={cx('sidebar-container--content-group')}>
-                <div className={cx('introduction-asset')}>
+                <div
+                    className={cx('introduction-asset', {
+                        'asset-none': none,
+                    })}
+                >
                     <div className={cx('intro-asset-wrapper')}>
                         <div className={cx('intro-asset')}>
                             <Button
