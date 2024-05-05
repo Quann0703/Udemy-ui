@@ -1,0 +1,53 @@
+.wrapper {
+    position: relative;
+}
+.carousel-module--grid {
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-auto-flow: column;
+    grid-gap: 1.6rem;
+}
+.carousel-module--scroll-lock {
+    overflow-x: hidden;
+}
+.carousel-module--scroll-port {
+    scrollbar-width: none;
+    display: flex;
+    overflow: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
+}
+.carousel-module--scroll-item {
+    min-width: 0.1rem;
+    scroll-snap-align: start;
+}
+.tabs-module--nav-button-container {
+    flex: 1 1 auto;
+    .ud-nav-button {
+        color: #d1d7dc;
+    }
+    .tabs-module--nav-button {
+        background: 0 0;
+        padding: 0.8rem 0.4rem;
+        outline-offset: -0.4rem !important;
+        color: var(--tabs-nav-color-default);
+        position: relative;
+        width: 100%;
+    }
+}
+.hover-title {
+    :hover {
+        color: #f7f9fa;
+    }
+}
+.nav-button-container-active {
+    border-bottom: 0;
+    box-shadow: 0 -6px #f7f9fa inset;
+    display: block;
+    .ud-nav-button {
+        color: #fff;
+    }
+}

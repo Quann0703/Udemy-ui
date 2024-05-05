@@ -32,6 +32,9 @@
     justify-content: space-evenly;
     align-items: center;
 }
+.current-user {
+    display: flex;
+}
 
 .more-btn {
     font-size: 2rem;
@@ -39,4 +42,30 @@
     background-color: transparent;
     padding: 4px 8px;
     cursor: pointer;
+}
+.desktop-header-module--dropdown-counter-badge {
+    top: 0;
+    left: 50%;
+    position: absolute;
+    font-size: 1.2rem;
+    margin: 0;
+}
+.notification-badge-module--ud-notification-counter {
+    border-radius: 9999px;
+    min-width: 2em;
+    padding: 0.4rem 0.8rem;
+}
+.notification-badge-module--ud-notification-badge {
+    background: #a435f0;
+    color: var(--color-white);
+    display: inline-block;
+    font-weight: 700;
+    text-align: center;
+}
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 12px;
 }

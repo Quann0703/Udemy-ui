@@ -4,9 +4,11 @@ import styles from './CourseHome.module.scss';
 import Image from '~/components/Image';
 import Rating from '~/components/Rating';
 import { Link } from 'react-router-dom';
+import Button from '~/components/Button';
+import { WishListIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
-function CourseHome({ img, title, teacher, price }) {
+function CourseHome({ img, title, teacher, price, wishList }) {
     return (
         <div className={cx('course-home')}>
             <div className={cx('course-unit-container', 'course-module', 'course-container')}>
@@ -59,6 +61,20 @@ function CourseHome({ img, title, teacher, price }) {
                     </div>
                 </div>
             </div>
+            {wishList && (
+                <Button
+                    size={cx('ud-btn-medium')}
+                    ghost={cx('ud-btn-ghost')}
+                    className={cx(
+                        'ud-heading-sm',
+                        'ud-btn-icon',
+                        'ud-btn-icon-medium',
+                        'wishlisted-course-card--wishlist-button',
+                    )}
+                >
+                    <WishListIcon classNames={cx('ud-icon', 'ud-icon-medium')} />
+                </Button>
+            )}
         </div>
     );
 }

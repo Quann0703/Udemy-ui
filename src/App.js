@@ -25,7 +25,13 @@ function App() {
                                         <Page />
                                     </Layout>
                                 }
-                            />
+                            >
+                                {route.children &&
+                                    route.children.map((routeChild, index) => {
+                                        const PageChild = routeChild.component;
+                                        return <Route key={index} path={routeChild.path} element={<PageChild />} />;
+                                    })}
+                            </Route>
                         );
                     })}
                 </Routes>

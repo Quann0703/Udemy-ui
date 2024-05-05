@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 import styles from './Cart.module.scss';
 import ShoppingList from './ShoppingList';
 import CartCheckOut from './ShoppingList/CartCheckOut';
-import CartItem from './ShoppingList/CartItem';
+import CartItem from '~/components/Course/CartItem';
 
 const cx = classNames.bind(styles);
 function Cart() {
@@ -21,8 +21,8 @@ function Cart() {
                         <div className={cx('shopping-list')}>
                             <h3 className={cx('ud-heading-md', 'shopping-list-title')}>4 khóa học trong giỏ hàng</h3>
                             <ShoppingList>
-                                <CartItem bestseller cart />
-                                <CartItem updated bestseller cart />
+                                <CartItem bestseller cart cartItem />
+                                <CartItem updated bestseller cart cartItem />
                             </ShoppingList>
                         </div>
                         <div className={cx('shopping-list')}>
@@ -30,8 +30,8 @@ function Cart() {
                                 Gần đây được thêm vào danh sách mong ước
                             </h3>
                             <ShoppingList>
-                                <CartItem bestseller wishList />
-                                <CartItem updated bestseller wishList />
+                                <CartItem bestseller wishList cartItem />
+                                <CartItem updated bestseller wishList cartItem />
                             </ShoppingList>
                         </div>
                     </div>

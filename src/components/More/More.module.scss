@@ -1,0 +1,50 @@
+.popper-module--animation-wrapper {
+    opacity: 0;
+    animation: popper-module--pop-in 100ms cubic-bezier(0.2, 0, 0.38, 0.9) forwards;
+}
+.dropdown-module--dropdown-menu {
+    background-color: #fff;
+    border: 1px solid #d1d7dc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin: 0.4rem 0;
+    overflow: auto;
+}
+.options-menu--menu-heading {
+    color: #6a6f73;
+    padding: 1.6rem 1.6rem 0;
+}
+
+.options-menu--collections-menu {
+    max-height: 15.8rem;
+    overflow: auto;
+    padding: 0.8rem 0;
+}
+.text-color {
+    color: #6a6f73;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.border-list {
+    border-top: 1px solid #d1d7dc;
+}
+.ud-block-list-item {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    letter-spacing: normal;
+    white-space: normal;
+}
+@keyframes popper-module--pop-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

@@ -4,16 +4,113 @@
 }
 
 .group-item {
-    padding: 1.6rem;
+    // padding: 1.6rem;
     text-align: center;
+    background: #fff;
+    .group-text {
+        margin-bottom: 1.6rem;
+    }
+    .group-btn {
+        margin-left: 0;
+    }
+    // + .group-item {
+    //     border-top: 1px solid #d1d7dc;
+    // }
 }
-
-.group-text {
-    margin-bottom: 1.6rem;
+.shopping-action {
+    text-align: center;
+    padding: 1.6rem;
+    + .shopping-action {
+        // margin-top: 10px;
+        border-top: 1px solid #d1d7dc;
+    }
 }
-
 .group-btn {
     width: 100%;
     white-space: nowrap;
     margin-bottom: 0;
+    // margin-top: 1.6rem;
+}
+// .wrapper-shopping {
+//     padding: 1.6rem;
+// }
+.panel-menu-module--footer {
+    background: #fff;
+    border-top: 1px solid #d1d7dc;
+    padding: 1.6rem;
+}
+.shopping-items-module--sticky-footer {
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.08), 0 -4px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+// .add-to-cart {
+//     margin-top: 10px;
+// }
+//header
+.panel-menu-module--gap-bottom {
+    margin-bottom: 1.6rem;
+}
+.panel-menu-module--section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.6rem 1.6rem 0;
+}
+.panel-menu-module--section-heading-title {
+    margin-right: 1.6rem;
+}
+.panel-menu-module--section-heading-link {
+    margin: 0.4rem 0;
+}
+.shopping-items-module--total {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+.base-price-text-module--container {
+    align-items: center;
+    color: #2d2f31;
+    display: flex;
+    flex-flow: row wrap;
+}
+.base-price-text-module--price-part {
+    line-height: 1;
+    padding: 0.4rem 0;
+    margin-right: 0.8rem;
+    white-space: nowrap;
+}
+.base-price-text-module--price-part:last-child {
+    margin-right: 0;
+}
+
+//profile
+.user-profile-dropdown-module--user-section {
+    border-bottom: 1px solid #d1d7dc;
+    color: #2d2f31;
+    display: flex;
+    padding: 1.6rem;
+}
+// .user-section-avatar{
+
+// }
+.user-details {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 0.8rem;
+    min-width: 1px;
+    word-break: break-word;
+}
+.user-profile-module--email {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #6a6f73;
+    margin-top: 0.4rem;
+    max-width: 15.4rem;
 }

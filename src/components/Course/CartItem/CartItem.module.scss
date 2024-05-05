@@ -38,10 +38,19 @@
     width: 4.8rem;
     height: 4.8rem;
 }
+.result-item--course-image {
+    display: block;
+    transition: opacity linear 100ms;
+    width: 100%;
+}
 @media (min-width: 61.31rem) {
     .shopping-item--course-image {
         width: 12rem;
         height: 6.8rem;
+    }
+    .result-item--course-image {
+        width: 23rem;
+        height: 12.8rem;
     }
 }
 .shopping__item-header {
@@ -201,7 +210,7 @@
     padding-top: 0.4rem;
     margin-left: 0.4rem;
     height: max-content;
-}
-.shopping-item-price-discounted {
-    color: #a435f0;
+    .shopping-item-price-discounted {
+        color: #a435f0;
+    }
 }

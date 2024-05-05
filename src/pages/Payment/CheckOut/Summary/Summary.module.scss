@@ -1,0 +1,35 @@
+.order-summary-container {
+    padding: 0;
+    margin-bottom: 4.8rem;
+    .order-items-list {
+        list-style: none;
+        padding: 0;
+        max-width: unset;
+    }
+}
+.summary-order-header {
+    margin-bottom: 1.6rem;
+}
+.order-items-list-item {
+    padding: 0.8rem 0;
+    display: flex;
+}
+.order-item-summary {
+    flex: 1;
+}
+.order-item-summary-img {
+    width: 3.2rem;
+    height: 3.2rem;
+    float: left;
+    margin: 0;
+    margin-right: 0.8rem;
+}
+.order-item-price {
+    width: 9.6rem;
+    text-align: right;
+    font-weight: 400;
+    color: #2d2f31;
+}
+.order-items-purchase-price {
+    font-size: 1.6rem;
+}

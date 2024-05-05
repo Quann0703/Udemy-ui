@@ -1,0 +1,37 @@
+.my-courses--learning-reminder-banner:not(:empty) {
+    margin-bottom: 3.2rem;
+}
+.alert-banner-module--alert-banner-information {
+    background: #fff;
+    border: 1px solid #d1d7dc;
+}
+.alert-banner-module--alert-banner {
+    display: flex;
+    padding: 1.6rem;
+    .alert-banner-module--body {
+        max-width: 80rem;
+    }
+}
+.alert-banner-module--alert-banner > * + * {
+    margin-left: 1.6rem;
+}
+.alert-banner-module--text-frame-with-icon {
+    justify-content: center;
+    min-height: 3.2rem;
+}
+.alert-banner-module--text-frame {
+    display: flex;
+    flex-direction: column;
+}
+.alert-banner-module--body {
+    margin-top: 0.4rem;
+}
+.alert-banner-module--cta-container {
+    margin-top: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -0.4rem;
+}
+.alert-banner-module--cta-container > * {
+    margin-bottom: 0.4rem;
+}

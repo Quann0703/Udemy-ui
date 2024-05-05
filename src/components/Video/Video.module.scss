@@ -1,0 +1,22 @@
+.video-wrapper {
+    height: 20rem;
+}
+.video-player--container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.video-player--video-wrapper {
+    position: relative;
+    flex: 1;
+    min-width: 1px;
+    display: flex;
+    z-index: 0;
+}
+@media (min-width: 37.56rem) {
+    .video-wrapper {
+        height: 35rem;
+    }
+}

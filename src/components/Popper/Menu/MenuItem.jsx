@@ -7,17 +7,22 @@ import Button from '~/components/Button';
 const cx = classNames.bind(styles);
 
 function MenuItem({ data, onClick }) {
+    const classes = cx(
+        'ud-text-sm',
+        'ud-block-list-item',
+        'ud-block-list-item-small',
+        'ud-block-list-item-neutral',
+        'menu-item',
+        {
+            separate: data.separate,
+        },
+    );
     return (
         <Button
+            to={data.to}
             secondary={cx('ud-btn-ghost')}
             size={cx('ud-btn-large')}
-            className={cx(
-                'ud-text-sm',
-                'ud-block-list-item',
-                'ud-block-list-item-small',
-                'ud-block-list-item-neutral',
-                'menu-item',
-            )}
+            className={classes}
             onClick={onClick}
         >
             <div className={cx('menu-content', 'ud-block-list-item-content')}>{data.title}</div>

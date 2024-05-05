@@ -1,0 +1,22 @@
+.billing__address {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3.2rem;
+    .billing__address-title {
+        margin-bottom: 1.6rem;
+    }
+    .billing__address-content {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0.8rem;
+    }
+}
+.billing__address-element {
+    flex: 1;
+    max-width: 50%;
+    margin-right: 0;
+}
+
+.billing__address-term {
+    color: #6a6f73;
+}

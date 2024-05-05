@@ -1,0 +1,81 @@
+// .panel-item {
+//     padding: 1.6rem;
+// }
+.item-card-module {
+    color: #2d2f31 !important;
+    display: flex;
+    position: relative;
+}
+.item-card-img-wrapper {
+    width: 6.4rem;
+    height: 6.4rem;
+    overflow: hidden;
+    position: relative;
+}
+.card-module--course-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: auto;
+    max-width: none;
+    height: 100%;
+    transform: translateX(-50%);
+}
+.card-module--course-info {
+    padding: 0 0.8rem;
+    width: 19.2rem;
+    text-align: start;
+    .card-module--course-title-condensed {
+        -webkit-line-clamp: 2;
+        max-height: 3.4rem;
+    }
+}
+.card-module--course-title {
+    display: block !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 3.4rem;
+    text-overflow: ellipsis;
+    white-space: normal;
+    margin-bottom: 0.4rem;
+    color: #2d2f31;
+    ::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+.item-module--buyable-instructors {
+    color: #6a6f73;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.card-module--start-learning {
+    color: #5624d0;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.base-price-text-module--container {
+    align-items: center;
+    color: #2d2f31;
+    display: flex;
+    flex-flow: row wrap;
+}
+.base-price-text-module--price-part {
+    line-height: 1;
+    padding: 0.4rem 0;
+    margin-right: 0.8rem;
+    white-space: nowrap;
+}
+.base-price-text-module--price-part:last-child {
+    margin-right: 0;
+}

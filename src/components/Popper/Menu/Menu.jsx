@@ -8,10 +8,11 @@ import { Wrapper as PopperWrapper } from '~/components/Popper';
 import styles from './Menu.module.scss';
 import MenuItem from './MenuItem';
 import Header from './Header';
+import Profile from '../Group/Profile';
 
 const cx = classNames.bind(styles);
 const defaultFn = () => {};
-function Menu({ children, items = [], onChange = defaultFn, hideOnClick = false }) {
+function Menu({ isUser, children, items = [], onChange = defaultFn, hideOnClick = false }) {
     const [history, setHistory] = useState([{ data: items }]);
     const current = history[history.length - 1];
 
@@ -43,6 +44,9 @@ function Menu({ children, items = [], onChange = defaultFn, hideOnClick = false 
                 <PopperWrapper className={cx('menu-popper', 'ud-unstyled-list', 'ud-block-list')}>
                     <div className={cx('menu-body')}>
                         {history.length > 1 && <Header title="Language" onBack={handdleBack} />}
+                        {history.length === 1 && isUser && (
+                            <Profile fullName="Trần văn quân" email="tranquan07112003@gmail.com" />
+                        )}
                         {renderItems()}
                     </div>
                 </PopperWrapper>

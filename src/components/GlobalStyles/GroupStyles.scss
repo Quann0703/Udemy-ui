@@ -360,6 +360,9 @@
 .ud-text-bold {
     font-weight: 700;
 }
+.ud-text-input-medium {
+    height: 4rem;
+}
 
 @media (max-width: 61.25rem) {
     .ud-text-responsive.ud-heading-serif-xxxl {
@@ -1167,4 +1170,202 @@
 .ud-avatar-image {
     background: 0 0;
     border: 1px solid #d1d7dc;
+}
+.ud-form-group {
+    min-width: 18rem;
+    max-width: 60rem;
+}
+
+.ud-form-label-tag {
+    flex: 1;
+    text-align: right;
+}
+.ud-text-input-large {
+    height: 4.8rem;
+}
+.ud-select-container {
+    position: relative;
+}
+.ud-select-icon-container {
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    padding: 0 0.8rem;
+}
+
+.ud-select-icon-left {
+    left: 0;
+    justify-content: flex-end;
+}
+
+.ud-select-container-large .ud-select-icon-container {
+    width: 4rem;
+}
+.ud-select {
+    background: var(--color-white);
+    border: 1px solid #2d2f31;
+    border-radius: 0;
+    cursor: pointer;
+    display: block;
+    padding: 0 4rem 0 1.2rem;
+    width: 100%;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.ud-select-container-large .ud-select {
+    height: 4.8rem;
+}
+
+.ud-select-container-large .ud-select-with-icon {
+    padding-left: 4rem;
+}
+
+.ud-select-icon-right {
+    right: 0;
+}
+
+.ud-select-container-large .ud-select-icon-container {
+    width: 4rem;
+}
+.ud-accordion-panel-toggler {
+    background: #f7f9fa;
+    padding: 0.8rem;
+}
+.ud-accordion-panel-heading {
+    display: flex;
+    flex: 1;
+}
+
+.ud-toggle-input-container {
+    cursor: pointer;
+    display: flex;
+    padding: 0.8rem 0;
+    user-select: none;
+    -webkit-user-select: none;
+    min-width: 18rem;
+    max-width: 60rem;
+}
+
+.ud-toggle-input-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.ud-fake-toggle-input {
+    border: 0.2rem solid #2d2f31;
+    margin-right: 0.8rem;
+    position: relative;
+    top: 0.2rem;
+}
+
+.ud-fake-toggle-checkbox {
+    color: transparent;
+}
+
+.ud-fake-toggle-radio-small {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.ud-fake-toggle-radio-large {
+    width: 2rem;
+    height: 2rem;
+}
+
+.ud-real-toggle-input:checked ~ .ud-fake-toggle-checkbox {
+    background: #2d2f31;
+    border-color: #2d2f31;
+    color: var(--color-white);
+}
+
+.ud-real-toggle-input:checked ~ .ud-fake-toggle-radio-small {
+    background: #2d2f31;
+    box-shadow: 0 0 0 0.2rem var(--color-white) inset;
+}
+
+.ud-real-toggle-input:checked ~ .ud-fake-toggle-radio-large {
+    background: #2d2f31;
+    box-shadow: 0 0 0 0.4rem var(--color-white) inset;
+}
+
+.ud-toggle-input-container:not(.ud-toggle-input-disabled):hover .ud-fake-toggle-input {
+    border-color: #101011;
+}
+
+.ud-toggle-input-container:not(.ud-toggle-input-disabled):hover
+    .ud-real-toggle-input:checked
+    ~ .ud-fake-toggle-checkbox {
+    border-color: #101011;
+    background: #101011;
+}
+
+.ud-fake-toggle-indeterminate-checkbox {
+    color: var(--color-white);
+    background: #2d2f31;
+    border-color: #2d2f31;
+}
+
+.ud-fake-toggle-radio {
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+body.ud-keyboard-navigation-in-use .ud-real-toggle-input:focus ~ .ud-fake-toggle-input {
+    outline: 4px solid #b4690e;
+}
+
+.ud-toggle-input-block-container.ud-toggle-input-container {
+    padding: 1.6rem;
+    position: relative;
+}
+
+.ud-toggle-input-block-container .ud-fake-toggle-input {
+    margin-right: 1.6rem;
+    top: 0;
+}
+
+.ud-toggle-input-block-outline {
+    border: 1px solid #2d2f31;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ud-toggle-input-block-details {
+    margin-top: 0.8rem;
+}
+
+.ud-icon-color-warning {
+    color: #f69c08;
+}
+
+.ud-block-list-item-icon + .ud-block-list-item-content {
+    margin-left: 1.6rem;
+}
+.ud-block-list-item-small .ud-block-list-item-icon,
+.ud-block-list-item-small .ud-block-list-item-content {
+    min-height: 1.96rem;
+}
+.ud-block-list .ud-block-list-item {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    letter-spacing: normal;
+    white-space: normal;
+}
+.transparent-icon {
+    fill: transparent;
+    padding: 1px;
+    stroke: currentcolor;
+    stroke-width: 2;
 }

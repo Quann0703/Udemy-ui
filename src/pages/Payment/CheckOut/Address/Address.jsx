@@ -1,0 +1,290 @@
+import classNames from 'classnames/bind';
+
+import styles from './Address.module.scss';
+import { ExpandIcon, LanguageIcon } from '~/components/Icons';
+
+const cx = classNames.bind(styles);
+function Address() {
+    return (
+        <section className={cx('billing__address')}>
+            <h2 className={cx('ud-heading-xl ', 'billing__address-title')}>Địa chỉ thanh toán</h2>
+            <div className={cx('billing__address-content')}>
+                <div className={cx('billing__address-element')}>
+                    <label className={cx('ud-form-label', 'ud-heading-sm')}>
+                        Quốc gia
+                        <span className={cx('ud-text-xs', 'ud-form-label-tag')}>Bắt buộc</span>
+                    </label>
+                    <div className={cx('ud-select-container-large', 'ud-select-container ')}>
+                        <div className={cx('ud-select-icon-container', 'ud-select-icon-left')}>
+                            <LanguageIcon classNames={cx('ud-icon', 'ud-icon-small', 'ud-icon-color-neutral')} />
+                        </div>
+                        <select
+                            required=""
+                            aria-invalid="false"
+                            autoComplete="off"
+                            data-purpose=""
+                            className={cx('ud-select', 'ud-text-md', 'ud-select-with-icon')}
+                        >
+                            <option value="" disabled="">
+                                Vui lòng chọn...
+                            </option>
+                            <option value="AF">Afghanistan</option>
+                            <option value="EG">Ai Cập</option>
+                            <option value="AL">Albania</option>
+                            <option value="DZ">Algeria</option>
+                            <option value="AD">Andorra</option>
+                            <option value="AO">Angola</option>
+                            <option value="AI">Anguilla</option>
+                            <option value="AG">Antigua và Barbuda</option>
+                            <option value="AR">Argentina</option>
+                            <option value="AM">Armenia</option>
+                            <option value="AW">Aruba</option>
+                            <option value="AZ">Azerbaijan</option>
+                            <option value="PL">Ba Lan</option>
+                            <option value="BS">Bahamas</option>
+                            <option value="BH">Bahrain</option>
+                            <option value="BD">Bangladesh</option>
+                            <option value="BB">Barbados</option>
+                            <option value="BY">Belarus</option>
+                            <option value="BZ">Belize</option>
+                            <option value="BJ">Benin</option>
+                            <option value="BM">Bermuda</option>
+                            <option value="BT">Bhutan</option>
+                            <option value="BO">Bolivia</option>
+                            <option value="BQ">Bonaire</option>
+                            <option value="BA">Bosnia và Herzegovina</option>
+                            <option value="BW">Botswana</option>
+                            <option value="BR">Brazil</option>
+                            <option value="BN">Brunei</option>
+                            <option value="BG">Bulgaria</option>
+                            <option value="BF">Burkina Faso</option>
+                            <option value="BI">Burundi</option>
+                            <option value="BE">Bỉ</option>
+                            <option value="PT">Bồ Đào Nha</option>
+                            <option value="CI">Bờ Biển Ngà</option>
+                            <option value="CM">Cameroon</option>
+                            <option value="KH">Campuchia</option>
+                            <option value="CA">Canada</option>
+                            <option value="CV">Cape Verde</option>
+                            <option value="TD">Chad</option>
+                            <option value="CL">Chile</option>
+                            <option value="CO">Colombia</option>
+                            <option value="KM">Comoros</option>
+                            <option value="CG">Congo</option>
+                            <option value="CR">Costa Rica</option>
+                            <option value="HR">Croatia</option>
+                            <option value="CW">Curaçao</option>
+                            <option value="AE">Các Tiểu Vương Quốc Ả Rập Thống Nhất</option>
+                            <option value="TF">Các lãnh thổ phía Nam thuộc Pháp</option>
+                            <option value="UM">Các đảo xa thuộc Hoa Kỳ</option>
+                            <option value="DO">Cộng hoà Dominica</option>
+                            <option value="CD">Cộng hoà Dân chủ Congo</option>
+                            <option value="CF">Cộng hoà Trung Phi</option>
+                            <option value="CZ">Cộng hòa Séc</option>
+                            <option value="CY">Cộng hòa Síp</option>
+                            <option value="DJ">Djibouti</option>
+                            <option value="DM">Dominica</option>
+                            <option value="DE">Dức</option>
+                            <option value="EC">Ecuador</option>
+                            <option value="SV">El Salvador</option>
+                            <option value="ER">Eritrea</option>
+                            <option value="EE">Estonia</option>
+                            <option value="ET">Ethiopia</option>
+                            <option value="FJ">Fiji</option>
+                            <option value="GA">Gabon</option>
+                            <option value="GM">Gambia</option>
+                            <option value="GE">Georgia</option>
+                            <option value="GH">Ghana</option>
+                            <option value="GI">Gibraltar</option>
+                            <option value="GL">Greenland</option>
+                            <option value="GD">Grenada</option>
+                            <option value="GP">Guadeloupe</option>
+                            <option value="GU">Guam</option>
+                            <option value="GT">Guatemala</option>
+                            <option value="GG">Guernsey</option>
+                            <option value="GF">Guiana thuộc Pháp</option>
+                            <option value="GN">Guinea</option>
+                            <option value="GQ">Guinea Xích đạo</option>
+                            <option value="GW">Guinea-Bissau</option>
+                            <option value="GY">Guyana</option>
+                            <option value="HT">Haiti</option>
+                            <option value="US">Hoa Kỳ</option>
+                            <option value="HN">Honduras</option>
+                            <option value="HU">Hungary</option>
+                            <option value="GR">Hy Lạp</option>
+                            <option value="NL">Hà Lan</option>
+                            <option value="KR">Hàn Quốc</option>
+                            <option value="HK">Hồng Kông</option>
+                            <option value="IS">Iceland</option>
+                            <option value="ID">Indonesia</option>
+                            <option value="IQ">Iraq</option>
+                            <option value="IE">Ireland</option>
+                            <option value="IL">Israel</option>
+                            <option value="JM">Jamaica</option>
+                            <option value="JE">Jersey</option>
+                            <option value="JO">Jordan</option>
+                            <option value="KZ">Kazakhstan</option>
+                            <option value="KE">Kenya</option>
+                            <option value="KI">Kiribati</option>
+                            <option value="XK">Kosovo</option>
+                            <option value="KW">Kuwait</option>
+                            <option value="KG">Kyrgyzstan</option>
+                            <option value="LV">Latvia</option>
+                            <option value="LB">Lebanon</option>
+                            <option value="LS">Lesotho</option>
+                            <option value="LR">Liberia</option>
+                            <option value="LY">Libya</option>
+                            <option value="LI">Liechenstein</option>
+                            <option value="LT">Lithuania</option>
+                            <option value="LU">Luxembourg</option>
+                            <option value="LA">Lào</option>
+                            <option value="IO">Lãnh thổ Anh tại Ấn Độ Dương</option>
+                            <option value="PS">Lãnh thổ Palestine</option>
+                            <option value="MO">Ma Cao</option>
+                            <option value="MK">Macedonia</option>
+                            <option value="MG">Madagascar</option>
+                            <option value="MW">Malawi</option>
+                            <option value="MY">Malaysia</option>
+                            <option value="MV">Maldives</option>
+                            <option value="ML">Mali</option>
+                            <option value="MT">Malta</option>
+                            <option value="MQ">Martinique</option>
+                            <option value="MR">Mauritania</option>
+                            <option value="MU">Mauritius</option>
+                            <option value="YT">Mayotte</option>
+                            <option value="MX">Mexico</option>
+                            <option value="FM">Micronesia</option>
+                            <option value="MD">Moldova</option>
+                            <option value="MC">Monaco</option>
+                            <option value="ME">Montenegro</option>
+                            <option value="MS">Montserrat</option>
+                            <option value="MA">Morocco</option>
+                            <option value="MZ">Mozambique</option>
+                            <option value="MM">Myanmar (Miến Điện)</option>
+                            <option value="MN">Mông Cổ</option>
+                            <option value="NO">Na Uy</option>
+                            <option value="AQ">Nam Cực</option>
+                            <option value="GS">Nam Georgia và Quần đảo Nam Sandwich</option>
+                            <option value="ZA">Nam Phi</option>
+                            <option value="SS">Nam Sudan</option>
+                            <option value="NA">Namibia</option>
+                            <option value="NR">Nauru</option>
+                            <option value="NP">Nepal</option>
+                            <option value="NC">New Caledonia</option>
+                            <option value="NZ">New Zealand</option>
+                            <option value="RU">Nga</option>
+                            <option value="JP">Nhật Bản</option>
+                            <option value="NI">Nicaragua</option>
+                            <option value="NE">Niger</option>
+                            <option value="NG">Nigeria</option>
+                            <option value="NU">Niue</option>
+                            <option value="OM">Oman</option>
+                            <option value="PK">Pakistan</option>
+                            <option value="PW">Palau</option>
+                            <option value="PA">Panama</option>
+                            <option value="PG">Papua New Guinea</option>
+                            <option value="PY">Paraguay</option>
+                            <option value="PE">Peru</option>
+                            <option value="PH">Philippines</option>
+                            <option value="FR">Pháp</option>
+                            <option value="FI">Phần Lan</option>
+                            <option value="PF">Polynesia thuộc Pháp</option>
+                            <option value="PR">Puerto Rico</option>
+                            <option value="QA">Qatar</option>
+                            <option value="KY">Quần đảo Cayman</option>
+                            <option value="CC">Quần đảo Cocos (Keeling)</option>
+                            <option value="CK">Quần đảo Cook</option>
+                            <option value="FK">Quần đảo Falkland (Islas Malvinas)</option>
+                            <option value="FO">Quần đảo Faroe</option>
+                            <option value="MH">Quần đảo Marshall</option>
+                            <option value="PN">Quần đảo Pitcairn</option>
+                            <option value="SB">Quần đảo Solomon</option>
+                            <option value="TC">Quần đảo Turks và Caicos</option>
+                            <option value="VG">Quần đảo Virgin thuộc Anh</option>
+                            <option value="VI">Quần đảo Virgin thuộc Hoa Kỳ</option>
+                            <option value="AX">Quần đảo Åland</option>
+                            <option value="RO">Romania</option>
+                            <option value="RW">Rwanda</option>
+                            <option value="RE">Réunion</option>
+                            <option value="BL">Saint Barthélemy</option>
+                            <option value="SH">Saint Helena</option>
+                            <option value="KN">Saint Kitts và Nevis</option>
+                            <option value="LC">Saint Lucia</option>
+                            <option value="MF">Saint Martin</option>
+                            <option value="PM">Saint Pierre và Miquelon</option>
+                            <option value="VC">Saint Vincent và Grenadines</option>
+                            <option value="WS">Samoa</option>
+                            <option value="AS">Samoa thuộc Mỹ</option>
+                            <option value="SM">San Marino</option>
+                            <option value="SN">Senegal</option>
+                            <option value="RS">Serbia</option>
+                            <option value="SC">Seychelles</option>
+                            <option value="SL">Sierra Leone</option>
+                            <option value="SG">Singapore</option>
+                            <option value="SX">Sint Maarten</option>
+                            <option value="SK">Slovakia</option>
+                            <option value="SI">Slovenia</option>
+                            <option value="SO">Somalia</option>
+                            <option value="LK">Sri Lanka</option>
+                            <option value="SR">Suriname</option>
+                            <option value="SJ">Svalbard và Jan Mayen</option>
+                            <option value="SZ">Swaziland</option>
+                            <option value="ST">São Tomé và Príncipe</option>
+                            <option value="TJ">Tajikistan</option>
+                            <option value="TZ">Tanzania</option>
+                            <option value="VA">Thành Vatican</option>
+                            <option value="TH">Thái Lan</option>
+                            <option value="TR">Thổ Nhĩ Kỳ</option>
+                            <option value="CH">Thụy Sĩ</option>
+                            <option value="SE">Thụy Điển</option>
+                            <option value="TG">Togo</option>
+                            <option value="TK">Tokelau</option>
+                            <option value="TO">Tonga</option>
+                            <option value="TT">Trinidad và Tobago</option>
+                            <option value="CN">Trung Quốc</option>
+                            <option value="TN">Tunisia</option>
+                            <option value="TM">Turkmenistan</option>
+                            <option value="TV">Tuvalu</option>
+                            <option value="ES">Tây Ban Nha</option>
+                            <option value="EH">Tây Sahara</option>
+                            <option value="UG">Uganda</option>
+                            <option value="UA">Ukraine</option>
+                            <option value="UY">Uruguay</option>
+                            <option value="UZ">Uzbekistan</option>
+                            <option value="VU">Vanuatu</option>
+                            <option value="VE">Venezuela</option>
+                            <option value="VN">Việt Nam</option>
+                            <option value="GB">Vương quốc Anh</option>
+                            <option value="WF">Wallis và Futuna</option>
+                            <option value="YE">Yemen</option>
+                            <option value="ZM">Zambia</option>
+                            <option value="ZW">Zimbabwe</option>
+                            <option value="AT">Áo</option>
+                            <option value="AU">Úc</option>
+                            <option value="IT">Ý</option>
+                            <option value="DK">Đan Mạch</option>
+                            <option value="TW">Đài Loan</option>
+                            <option value="TL">Đông Timor</option>
+                            <option value="BV">Đảo Bouvet</option>
+                            <option value="MP">Đảo Bắc Mariana</option>
+                            <option value="CX">Đảo Giáng Sinh</option>
+                            <option value="HM">Đảo Heard và Quần đảo McDonald</option>
+                            <option value="IM">Đảo Man</option>
+                            <option value="NF">Đảo Norfolk</option>
+                            <option value="SA">Ả Rập Xê-út</option>
+                        </select>
+                        <div className={cx('ud-select-icon-container', 'ud-select-icon-right')}>
+                            <ExpandIcon classNames={cx('ud-icon', 'ud-icon-small', 'ud-icon-color-neutral')} />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className={cx('ud-text-xs', 'billing__address-term')}>
+                Theo luật pháp, Udemy bắt buộc phải thu thuế giao dịch hiện hành đối với giao dịch mua được thực hiện
+                trong một số khu vực có quy định riêng về thuế.
+            </div>
+        </section>
+    );
+}
+
+export default Address;

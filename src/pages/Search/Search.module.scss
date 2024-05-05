@@ -1,0 +1,62 @@
+.search-header-container {
+    margin-bottom: 2.4rem;
+}
+.search--header-title {
+    max-width: 80rem;
+}
+.courses-results {
+    margin-bottom: 3.2rem;
+}
+.courses-results > * {
+    margin-bottom: 1.6rem;
+}
+.filter-panel-search {
+    position: relative;
+}
+
+@media (min-width: 37.56rem) {
+    .search--header-title {
+        font-size: 3.2rem;
+    }
+    .filter-panel-search {
+        overflow: hidden;
+        padding-right: 3.2rem;
+        margin-right: -3.2rem;
+    }
+}
+
+.pagination-module--container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.pagination-module--container > * {
+    margin-bottom: 1.6rem;
+}
+.pagination-module--prev {
+    margin-right: 0.8rem;
+}
+.pagination-module--page {
+    width: 4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.pagination-module--active {
+    background: 0 0 !important;
+    cursor: default;
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 1.2rem;
+        right: 1.2rem;
+        height: 0.2rem;
+        background: var(--color-blue-400);
+    }
+}
+.pagination-module--ellipsis {
+    transform: rotate(90deg);
+    margin: 0 0.4rem;
+}

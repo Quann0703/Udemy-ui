@@ -73,7 +73,7 @@ const LISTINCENTIVE = [
         content: 'Giấy chứng nhận hoàn thành',
     },
 ];
-function SidebarContent({ data }) {
+function SidebarContent({ data, onClick }) {
     const [none, setNone] = useState(false);
     useEffect(() => {
         const handleScroll = () => {
@@ -89,7 +89,6 @@ function SidebarContent({ data }) {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-    console.log(none);
     return (
         <div className={cx('sidebar-container--content')}>
             <div className={cx('sidebar-container--content-group')}>
@@ -98,7 +97,7 @@ function SidebarContent({ data }) {
                         'asset-none': none,
                     })}
                 >
-                    <div className={cx('intro-asset-wrapper')}>
+                    <div className={cx('intro-asset-wrapper')} onClick={onClick}>
                         <div className={cx('intro-asset')}>
                             <Button
                                 secondary={cx('ud-btn-ghost')}

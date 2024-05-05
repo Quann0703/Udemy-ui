@@ -417,7 +417,225 @@ export const OfferIcon = ({ width = '3rem', height = '3rem', classNames }) => {
             focusable="false"
             viewBox="0 0 24 24"
         >
-            <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"></path>
+            <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z" />
+        </svg>
+    );
+};
+
+export const LockIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M18 9h-1V7c0-2.76-2.24-5-5-5S7 4.24 7 7v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V11c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V7c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"></path>
+        </svg>
+    );
+};
+
+export const WarningIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2V9h2v5z" />
+        </svg>
+    );
+};
+
+export const PreviousIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+        </svg>
+    );
+};
+
+export const NextIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6-6-6-1.41 1.41z"></path>
+        </svg>
+    );
+};
+
+export const MoreIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>
+        </svg>
+    );
+};
+
+export const CLoseIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path>
+        </svg>
+    );
+};
+
+export const AlarmIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M22 5.72l-4.6-3.86-1.29 1.53 4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86 2 5.71l1.29 1.53 4.59-3.85zM12.5 8H11v6l4.75 2.85.75-1.23-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a9 9 0 000-18zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"></path>
+        </svg>
+    );
+};
+
+export const ShareIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M23.25 10.75L14.5 2v5C5.75 8.25 2 14.5.75 20.75c3.125-4.375 7.5-6.375 13.75-6.375V19.5l8.75-8.75z"></path>
+        </svg>
+    );
+};
+
+export const RatingStarIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"></path>
+        </svg>
+    );
+};
+
+export const FolderIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path>
+        </svg>
+    );
+};
+
+export const AddCircleSolidIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"></path>
+        </svg>
+    );
+};
+
+export const CalenderIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path
+                clipRule="evenodd"
+                d="M18 14.486C18 16.65 16.925 18 15.15 18s-2.854-1.341-2.854-3.51c0-2.162 1.09-3.49 2.854-3.49S18 12.323 18 14.486zm-4.204.005c0 1.522.514 2.386 1.354 2.386s1.35-.86 1.35-2.386c0-1.514-.514-2.368-1.35-2.368-.83 0-1.354.86-1.354 2.368z"
+                fillRule="evenodd"
+            ></path>
+            <path d="M8.698 14.927h-.87v-1.012h.855c.675 0 1.13-.38 1.13-.933 0-.543-.406-.9-1.14-.9-.684 0-1.138.385-1.177.97h-1.36c.055-1.24 1.071-2.047 2.601-2.047 1.467 0 2.469.714 2.469 1.787 0 .821-.592 1.416-1.457 1.564v.028c1.051.083 1.73.687 1.73 1.615 0 1.203-1.148 2.001-2.776 2.001C7.11 18 6.068 17.17 6 15.934h1.413c.044.567.532.938 1.31.938.738 0 1.256-.395 1.256-.96 0-.614-.484-.985-1.28-.985z"></path>
+            <path
+                clipRule="evenodd"
+                d="M19 3h1c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h1V1h2v2h10V1h2zM4 21h16V8H4z"
+                fillRule="evenodd"
+            ></path>
+        </svg>
+    );
+};
+
+export const NotificationIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 24 24"
+        >
+            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5z"></path>
         </svg>
     );
 };

@@ -7,14 +7,17 @@ import { BulletIcon, OfferIcon } from '~/components/Icons';
 import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
-function CartItem({ updated, bestseller, wishList, cart }) {
+function CartItem({ updated, bestseller, wishList, cart, cartItem, resultItem }) {
     return (
         <div className={cx('style__shopping-item-wrapper')}>
             <div className={cx('shopping__item-container', 'shopping__item-with-inline')}>
                 <div className={cx('shopping__item-img')}>
                     <div className={cx('shopping__item-img-wrapper')}>
                         <Image
-                            className={cx('shopping-item--course-image')}
+                            className={cx({
+                                'shopping-item--course-image': cartItem,
+                                'result-item--course-image': resultItem,
+                            })}
                             src="https://img-c.udemycdn.com/course/240x135/258316_55e9_12.jpg"
                             alt=""
                             height={68}
