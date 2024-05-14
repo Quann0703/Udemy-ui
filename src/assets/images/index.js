@@ -1,5 +1,6 @@
 const images = {
     logo: require('~/assets/images/logo-udemy.svg').default,
+    logoInverted: require('~/assets/images/logo-udemy-inverted (1).svg').default,
     logoFooter: require('~/assets/images/logo-udemy-inverted.svg').default,
     noImage: require('~/assets/images/no-image.png'),
     slider_1: require('~/assets/images/slider1.jpg'),

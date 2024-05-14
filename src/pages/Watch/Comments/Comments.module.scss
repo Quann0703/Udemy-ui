@@ -1,0 +1,26 @@
+.main-comment-btn {
+    bottom: 70px;
+    position: fixed;
+    right: 20px;
+    z-index: 1;
+}
+.main-show-track {
+    right: calc(23% + 20px);
+}
+.comment-btn {
+    background-color: #fff;
+    border-radius: 999px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #a435f0;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    position: relative;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    .title {
+        margin-left: 8px;
+    }
+}

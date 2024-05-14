@@ -1,0 +1,48 @@
+.wrapper {
+    align-items: center;
+    background-color: #f0f0f0;
+    bottom: 0;
+    box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 2;
+    .btn-actionbar {
+        color: var(--primary-color);
+        border-radius: 6px;
+        align-items: center;
+    }
+    .color-icon {
+        color: var(--primary-color);
+    }
+    .toggle-wrap {
+        align-items: center;
+        bottom: 0;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30%;
+    }
+    .title {
+        margin-left: 8px;
+    }
+    .toggle-btn {
+        align-items: center;
+        background-color: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        flex-shrink: 0;
+        font-size: 1.6rem;
+        height: 38px;
+        justify-content: center;
+        margin: 0 8px;
+        width: 38px;
+    }
+}

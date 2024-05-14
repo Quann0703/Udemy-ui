@@ -12,6 +12,9 @@ import { CartIcon, NotificationIcon, WishListIcon } from '~/components/Icons';
 import Menu from '~/components/Popper/Menu';
 import Group from '~/components/Popper/Group';
 import Image from '~/components/Image';
+import * as categoryService from '~/services/categoryService';
+import { useEffect, useState } from 'react';
+import Categories from '~/components/Popper/Categories';
 
 const cx = classNames.bind(styles);
 
@@ -69,6 +72,7 @@ const ACTION = {
 };
 
 function Header() {
+    const [categories, setCategories] = useState();
     const handleMenuChange = (menuItem) => {
         switch (menuItem.type) {
             case 'language':
@@ -77,6 +81,27 @@ function Header() {
             default:
         }
     };
+    useEffect(() => {
+        categoryService.getCategories().then((res) => {
+            const newData = res.map((item) => {
+                return {
+                    ...item,
+                    children: {
+                        data: [
+                            ...item.field.map((item) => {
+                                return {
+                                    ...item,
+                                    children: { data: [...item.topic] },
+                                };
+                            }),
+                        ],
+                    },
+                };
+            });
+            setCategories(newData);
+        });
+    }, []);
+
     const currentUser = true;
     const userMenu = [
         {
@@ -120,14 +145,18 @@ function Header() {
                     </Link>
                 </div>
 
-                <Button
-                    secondary={cx('ud-btn-ghost')}
-                    btnText
-                    size={cx('ud-btn-large')}
-                    className={cx('ud-heading-md')}
-                >
-                    <span className={cx('category-text', 'ud-text-sm')}>Thể Loại</span>
-                </Button>
+                <Categories items={categories}>
+                    <div>
+                        <Button
+                            secondary={cx('ud-btn-ghost')}
+                            btnText
+                            size={cx('ud-btn-large')}
+                            className={cx('ud-heading-md')}
+                        >
+                            <span className={cx('category-text', 'ud-text-sm')}>Thể Loại</span>
+                        </Button>
+                    </div>
+                </Categories>
                 <Search />
                 <div className={cx('actions')}>
                     {currentUser ? (

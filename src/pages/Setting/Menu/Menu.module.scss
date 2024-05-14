@@ -1,0 +1,22 @@
+.sidebar-list {
+    min-width: 270px;
+    padding-left: 0;
+}
+.item {
+    align-items: center;
+    border-radius: 8px;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 4px;
+    padding: 14px 12px;
+    span {
+        color: var(--text-color);
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 2rem;
+    }
+    &.active {
+        background-color: #eee;
+        border-radius: 8px;
+    }
+}

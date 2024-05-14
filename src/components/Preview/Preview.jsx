@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 
 import styles from './Preview.module.scss';
-import Video from '../Video';
+import { Video } from '../Video';
 import PreviewItem from './PreviewItem';
 import Button from '../Button';
 import { CLoseIcon } from '../Icons';

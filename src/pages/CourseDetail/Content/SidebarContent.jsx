@@ -169,7 +169,7 @@ function SidebarContent({ data, onClick }) {
                             </div>
                             <div className={cx('purchase-local-incentive')}>
                                 <div className={cx('money-back-guarantee')}>
-                                    <span className="money-back">Đảm bảo hoàn tiền trong 30 ngày</span>
+                                    <span className={cx('money-back')}>Đảm bảo hoàn tiền trong 30 ngày</span>
                                 </div>
                             </div>
                             <div className={cx('purchase-available-coupons')}></div>

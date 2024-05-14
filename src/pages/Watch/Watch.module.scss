@@ -1,0 +1,9 @@
+.ud-main-content-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.ud-main-content-wrapper,
+.ud-main-content {
+    flex: 1 0 auto;
+}

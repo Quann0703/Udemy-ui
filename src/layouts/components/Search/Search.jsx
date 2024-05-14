@@ -19,6 +19,7 @@ function Search() {
             setSearchResult([1, 2, 3]);
         }, 3000);
     }, []);
+    console.log(searchResult);
     return (
         <HeadLessTippy
             interactive

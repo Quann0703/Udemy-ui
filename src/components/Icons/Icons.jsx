@@ -1,22 +1,3 @@
-export const HeartIcon = ({ width = '2.5rem', height = '2.5rem', className }) => (
-    <svg
-        className={className}
-        width={width}
-        height={height}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="1.5"
-        stroke="currentColor"
-    >
-        <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-        />
-    </svg>
-);
-
 export const CartIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
     <svg
         className={className}
@@ -636,6 +617,184 @@ export const NotificationIcon = ({ width = '3rem', height = '3rem', classNames }
             viewBox="0 0 24 24"
         >
             <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5z"></path>
+        </svg>
+    );
+};
+
+export const ProgressIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 100 100"
+        >
+            <path
+                d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+                stroke="#3e4143"
+                strokeWidth={6}
+                fillOpacity={0}
+            />
+            <path
+                d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+                stroke="#c0c4fc"
+                strokeWidth={6}
+                fillOpacity={0}
+                style={{
+                    strokeDasharray: '295.416, 295.416',
+                    strokeDashoffset: '295.416',
+                }}
+            />
+        </svg>
+    );
+};
+
+export const ExitsIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            role="img"
+            viewBox="0 0 320 512"
+        >
+            <path
+                fill="currentColor"
+                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+            />
+        </svg>
+    );
+};
+
+export const HeartIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            role="img"
+            viewBox="0 0 512 512"
+        >
+            <path
+                fill="currentColor"
+                d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"
+            />
+        </svg>
+    );
+};
+
+export const ArrowRightIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            role="img"
+            viewBox="0 0 448 512"
+        >
+            <path
+                fill="currentColor"
+                d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z"
+            />
+        </svg>
+    );
+};
+
+export const BarIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            role="img"
+            viewBox="0 0 448 512"
+        >
+            <path
+                fill="currentColor"
+                d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"
+            />
+        </svg>
+    );
+};
+
+export const CommentIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            role="img"
+            viewBox="0 0 640 512"
+        >
+            <path
+                fill="currentColor"
+                d="M416 176C416 78.8 322.9 0 208 0S0 78.8 0 176c0 39.57 15.62 75.96 41.67 105.4c-16.39 32.76-39.23 57.32-39.59 57.68c-2.1 2.205-2.67 5.475-1.441 8.354C1.9 350.3 4.602 352 7.66 352c38.35 0 70.76-11.12 95.74-24.04C134.2 343.1 169.8 352 208 352C322.9 352 416 273.2 416 176zM599.6 443.7C624.8 413.9 640 376.6 640 336C640 238.8 554 160 448 160c-.3145 0-.6191 .041-.9336 .043C447.5 165.3 448 170.6 448 176c0 98.62-79.68 181.2-186.1 202.5C282.7 455.1 357.1 512 448 512c33.69 0 65.32-8.008 92.85-21.98C565.2 502 596.1 512 632.3 512c3.059 0 5.76-1.725 7.02-4.605c1.229-2.879 .6582-6.148-1.441-8.354C637.6 498.7 615.9 475.3 599.6 443.7z"
+            />
+        </svg>
+    );
+};
+
+export const SecurityIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            role="img"
+            viewBox="0 0 512 512"
+        >
+            <path
+                fill="currentColor"
+                d="M466.5 83.71l-192-80C269.6 1.67 261.3 0 256 0C250.7 0 242.5 1.67 237.6 3.702l-192 80C27.7 91.1 16 108.6 16 127.1c0 257.2 189.2 384 239.1 384c51.1 0 240-128.2 240-384C496 108.6 484.3 91.1 466.5 83.71zM256 446.5l.0234-381.1c.0059-.0234 0 0 0 0l175.9 73.17C427.8 319.7 319 417.1 256 446.5z"
+            />
+        </svg>
+    );
+};
+
+export const PersonalIcon = ({ width = '3rem', height = '3rem', classNames }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={classNames}
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            role="img"
+            viewBox="0 0 448 512"
+        >
+            <path
+                fill="currentColor"
+                d="M272 304h-96C78.8 304 0 382.8 0 480c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32C448 382.8 369.2 304 272 304zM48.99 464C56.89 400.9 110.8 352 176 352h96c65.16 0 119.1 48.95 127 112H48.99zM224 256c70.69 0 128-57.31 128-128c0-70.69-57.31-128-128-128S96 57.31 96 128C96 198.7 153.3 256 224 256zM224 48c44.11 0 80 35.89 80 80c0 44.11-35.89 80-80 80S144 172.1 144 128C144 83.89 179.9 48 224 48z"
+            />
         </svg>
     );
 };

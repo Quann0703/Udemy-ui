@@ -1,0 +1,80 @@
+.app--row {
+    display: flex;
+    justify-content: center;
+}
+.wrapper {
+    color: #fff;
+    background-color: #2d2f31;
+    height: 5.6rem;
+    align-items: center;
+    border-bottom: 1px solid #3e4143;
+}
+.header-content {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    padding: 0 1.6rem;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.4rem;
+    height: 100%;
+}
+.logo-link {
+    display: flex;
+    width: 100px;
+}
+.vertical-divider {
+    height: 40%;
+    border-left: 1px solid #3e4143;
+}
+.header-title {
+    display: flex;
+}
+.header--flex {
+    flex: 1;
+    min-width: 1px;
+}
+// .course-title{
+
+// }
+.header-link {
+    color: #fff;
+}
+.header-text {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.truncate-with-tooltip--ellipsis {
+    display: block !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+.popper-module--popper {
+    position: relative;
+}
+.progress--progress-circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.progress--progress-text {
+    color: #fff;
+}
+.progress--progress-label {
+    margin-left: 0.8rem !important;
+}
+.resource-context-menu-options {
+    align-items: center;
+    display: flex;
+}

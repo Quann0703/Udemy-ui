@@ -15,5 +15,11 @@ const routes = {
         archived: 'archived',
         tools: 'learning-tools',
     },
+    setting: {
+        path: '/setting',
+        personal: 'personal',
+        security: 'security',
+        notifications: 'notifications',
+    },
 };
 export default routes;

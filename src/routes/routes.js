@@ -8,6 +8,9 @@ import { HeaderOnly } from '~/layouts';
 import Search from '~/pages/Search';
 import Me from '~/pages/Me';
 import Tab from '~/pages/Me/Study/Tab';
+import TagSetting from '~/pages/Setting/Tab';
+import Watch from '~/pages/Watch';
+import Setting from '~/pages/Setting';
 
 const publicRoutes = [
     { path: config.routes.home, component: Home },
@@ -16,6 +19,7 @@ const publicRoutes = [
     { path: config.routes.payment, component: Payment, layout: HeaderOnly },
     { path: config.routes.course, component: CourseDetail },
     { path: config.routes.search, component: Search },
+    { path: config.routes.watch, component: Watch, layout: null },
     {
         path: config.routes.myCourses.path,
         component: Me,
@@ -25,6 +29,15 @@ const publicRoutes = [
             { path: config.routes.myCourses.archived, component: Tab },
             { path: config.routes.myCourses.wishlist, component: Tab },
             { path: config.routes.myCourses.tools, component: Tab },
+        ],
+    },
+    {
+        path: config.routes.setting.path,
+        component: Setting,
+        children: [
+            { path: config.routes.setting.personal, component: TagSetting },
+            { path: config.routes.setting.security, component: TagSetting },
+            { path: config.routes.setting.notifications, component: TagSetting },
         ],
     },
 ];

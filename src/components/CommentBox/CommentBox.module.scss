@@ -1,0 +1,46 @@
+.wrapper {
+    align-items: flex-start;
+    display: flex;
+    line-height: 1.6;
+    padding-bottom: 48px;
+    .content {
+        flex: 1 1;
+        max-width: 710px;
+    }
+    .placeholder {
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+        cursor: text;
+        display: flex;
+        height: 33px;
+        padding: 8px 0;
+        span {
+            color: #999;
+            font-size: 1.4rem;
+        }
+    }
+    .action {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+        width: 100%;
+        .cancel-btn {
+            color: #888;
+        }
+        .active {
+            background: var(--primary-color);
+            color: var(--white-color);
+            pointer-events: auto;
+        }
+    }
+}
+.btn-style {
+    background: #ccc;
+    color: var(--white-color);
+    pointer-events: none;
+    border-radius: 20px;
+}
+.avatar-wrapper {
+    margin-right: 12px;
+    position: relative;
+}

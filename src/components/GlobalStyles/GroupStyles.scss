@@ -52,6 +52,9 @@
 .ud-icon-color-neutral {
     color: #2d2f31;
 }
+.ud-icon-color-primary {
+    color: var(--primary-color);
+}
 .ud-icon-medium {
     width: 2.4rem;
     height: 2.4rem;
@@ -439,6 +442,11 @@
 .ud-btn-white-outline {
     background-color: transparent;
     border: 1px solid var(--white-color);
+}
+
+.ud-btn-white-outline-primary {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
 }
 .ud-btn-secondary {
     color: var(--color-gray-500);
@@ -1368,4 +1376,7 @@ body.ud-keyboard-navigation-in-use .ud-real-toggle-input:focus ~ .ud-fake-toggle
     padding: 1px;
     stroke: currentcolor;
     stroke-width: 2;
+}
+.ud-btn > :not(:first-child) {
+    margin-left: 0.4rem;
 }

@@ -5,7 +5,7 @@ import Image from '~/components/Image';
 const cx = classNames.bind(styles);
 function Profile() {
     return (
-        <a href="/user/edit-profile/" className={cx('user-profile-dropdown-module--user-section')}>
+        <a href="/profile" className={cx('user-profile-dropdown-module--user-section')}>
             <Image
                 src="https://img-c.udemycdn.com/user/75x75/245266240_ca52.jpg"
                 alt=""

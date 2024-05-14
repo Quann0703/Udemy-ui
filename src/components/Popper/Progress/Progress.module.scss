@@ -1,0 +1,44 @@
+.popover-module--popover-padding {
+    padding: 2.4rem;
+}
+.popover-module--popover {
+    position: relative;
+    width: 32rem;
+    background-color: #fff;
+    color: #2d2f31;
+}
+.popover-module--inner {
+    position: relative;
+    z-index: 1;
+}
+.popover-module--arrow {
+    position: absolute;
+    &::before {
+        content: '';
+        box-sizing: border-box;
+        display: block;
+        height: 2.26rem;
+        width: 2.26rem;
+        background-color: #fff;
+        border: 1px solid #d1d7dc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+        position: absolute;
+    }
+    &::after {
+        content: '';
+        display: block;
+        background-color: #fff;
+        position: absolute;
+        height: 2rem;
+        width: 2rem;
+    }
+}
+.popover-module--arrow-bottom {
+    display: flex;
+    &::before {
+        transform: translateX(-1.2rem) translateY(-1.2rem) scaleX(0.5) rotate(-45deg);
+    }
+    &::after {
+        transform: translateX(-1rem);
+    }
+}
