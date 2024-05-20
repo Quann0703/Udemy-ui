@@ -1,14 +1,13 @@
+import {} from 'stylis-plugin-rtl';
 module.exports = {
-    // ...
     module: {
         rules: [
-            // Loại bỏ source-map-loader
             {
                 test: /\.js$/,
-                exclude: /node_modules\/(?!hast-util-raw)/, // Loại bỏ node_modules trừ hast-util-raw
-                use: ['babel-loader'], // Hoặc các loader khác bạn sử dụng
+                exclude: /node_modules\/(?!hast-util-raw)/,
+                use: ['babel-loader'],
             },
         ],
     },
-    // ...
+    ignoreWarnings: [/Failed to parse source map/],
 };

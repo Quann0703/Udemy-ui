@@ -5,9 +5,26 @@ import { Video } from '../Video';
 import PreviewItem from './PreviewItem';
 import Button from '../Button';
 import { CLoseIcon } from '../Icons';
+import { useState } from 'react';
 
 const cx = classNames.bind(styles);
-function Preview({ backClick }) {
+function Preview({ course, track, backClick }) {
+    const { title } = course;
+    const { step = [] } = track;
+    const [videoId, setVideoId] = useState({
+        title: 'The Ultimate React Course 2024: React, Next.js, Redux & More',
+        video: 'FdiTx5jBo9Y',
+    });
+    const [currentIndex, setCurrentIndex] = useState(null);
+    console.log(videoId);
+    console.log(step);
+    const handleChangeVideo = (videoId, title, index) => {
+        setVideoId({
+            video: videoId,
+            title: title,
+        });
+        setCurrentIndex(index);
+    };
     return (
         <div className={cx('wrapper')}>
             <div
@@ -41,21 +58,34 @@ function Preview({ backClick }) {
                         <div className={cx('container--course-preview')}>
                             <h2 className={cx('ud-modal-title')}>
                                 <span className={cx('ud-heading-sm', 'course-preview__intro')}>Xem trước khóa học</span>
-                                <span className={cx('ud-heading-lg')}>
-                                    React Pro TypeScript - Thực Hành Dự Án Portfolio
-                                </span>
+                                <span className={cx('ud-heading-lg')}>{title}</span>
                             </h2>
                             <div className={cx('course-preview')}>
                                 <div>
-                                    <Video />
+                                    <Video videoId={videoId} />
                                 </div>
                                 <div className={cx('ud-heading-md', 'course-preview--separation-text')}>
                                     Video mẫu miễn phí:
                                 </div>
                                 <div className={cx('course-preview--preview-rows')}>
-                                    <PreviewItem current />
+                                    {/* <PreviewItem current />
                                     <PreviewItem />
-                                    <PreviewItem />
+                                    <PreviewItem /> */}
+                                    {step.map((item) => {
+                                        return (
+                                            <div key={item.id}>
+                                                <PreviewItem
+                                                    title={item.title}
+                                                    duration={item.lesson['duration']}
+                                                    image={item.lesson['image']}
+                                                    isCurrent={item.id === currentIndex}
+                                                    onVideo={() =>
+                                                        handleChangeVideo(item.lesson['video'], item.title, item.id)
+                                                    }
+                                                />
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         </div>

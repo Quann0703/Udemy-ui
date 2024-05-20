@@ -4,7 +4,7 @@ const routes = {
     payment: '/payment',
     profile: '/profile',
     search: '/search',
-    course: '/course/:slug',
+    course: '/courses/:slug',
     me: '/me',
     watch: '/watch/:slug',
     myCourses: {

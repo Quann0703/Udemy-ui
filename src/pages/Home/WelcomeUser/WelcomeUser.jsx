@@ -5,14 +5,14 @@ import Button from '~/components/Button';
 import MyCourseLearning from './MycourseLearning';
 
 const cx = classNames.bind(styles);
-function WellcomeUser() {
+function WelcomeUser() {
     return (
         <div>
             <div className={cx('learning-header')}>
                 <h2 className={cx('ud-heading-serif-xl', 'learning-title')}>Trần Văn ơi, hãy bắt đầu học nào</h2>
                 <div className={cx('learning-link')}>
                     <Button
-                        href="/home/mycourse"
+                        href="/me/learning"
                         primary={cx('ud-btn-ghost')}
                         size={cx('ud-btn-large')}
                         className={cx('ud-heading-md', 'ud-link-underline')}
@@ -29,4 +29,4 @@ function WellcomeUser() {
     );
 }
 
-export default WellcomeUser;
+export default WelcomeUser;

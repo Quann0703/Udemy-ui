@@ -36,7 +36,7 @@ function DetailLessonItem({ video, doc, preview, duration = '0:00', title = 'int
                         </button>
                     )}
                     <span className={cx('section--hidden-on-mobile')} style={{ flex: '1 1 0%' }}></span>
-                    <span className={cx('section--hidden-on-mobile', 'section-duration')}>{duration}</span>
+                    <span className={cx('section--hidden-on-mobile', 'section-duration')}>{duration}:00</span>
                 </div>
             </div>
         </li>

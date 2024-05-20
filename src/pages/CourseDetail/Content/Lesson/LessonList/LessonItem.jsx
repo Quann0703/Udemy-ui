@@ -5,7 +5,7 @@ import Button from '~/components/Button';
 import { ExpandIcon } from '~/components/Icons';
 import { useEffect, useState } from 'react';
 const cx = classNames.bind(styles);
-function LessonItem({ children, clickLesson }) {
+function LessonItem({ children, clickLesson, amountLesson = 0 }) {
     const [rotate, setRotate] = useState(true);
     useEffect(() => {
         if (clickLesson) {
@@ -36,7 +36,7 @@ function LessonItem({ children, clickLesson }) {
                         <span className={cx('ud-accordion-panel-title')}>
                             <span className={cx('section-title')}>Danh sách khóa học</span>
                             <span className={cx('section-content', 'ud-text-sm ')}>
-                                4 bài giảng • <span>26 phút</span>
+                                {amountLesson} bài giảng •{/* <span>26 phút</span> */}
                             </span>
                         </span>
                     </Button>

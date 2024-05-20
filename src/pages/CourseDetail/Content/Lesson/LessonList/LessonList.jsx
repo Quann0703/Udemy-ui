@@ -6,13 +6,15 @@ import { DetailLesson, LessonItem } from '.';
 import { useState } from 'react';
 
 const cx = classNames.bind(styles);
-function LessonList() {
+function LessonList({ data }) {
     const [showLesson, setShowLesson] = useState(false);
     const show = () => {
         setShowLesson((prev) => {
             return !prev;
         });
     };
+    const { step = [] } = data;
+    console.log(data);
     return (
         <div className={cx('component-margin')}>
             <span className={cx('in-page-offset-anchor')}></span>
@@ -21,10 +23,10 @@ function LessonList() {
                 <div className={cx('curriculum-sub-header')}>
                     <div className={cx('ud-text-sm')}>
                         <span className={cx('curriculum-content-length')}>
-                            8 phần • 71 bài giảng •
-                            <span>
+                            • {step.length} bài giảng •
+                            {/* <span>
                                 <span>12&nbsp;giờ&nbsp;15&nbsp;phút</span> tổng thời lượng
-                            </span>
+                            </span> */}
                         </span>
                     </div>
                     <Button
@@ -36,7 +38,9 @@ function LessonList() {
                     </Button>
                 </div>
                 <div>
-                    <LessonItem clickLesson={show}>{showLesson && <DetailLesson />}</LessonItem>
+                    <LessonItem amountLesson={step.length} clickLesson={show}>
+                        {showLesson && <DetailLesson data={step} />}
+                    </LessonItem>
                 </div>
             </div>
         </div>

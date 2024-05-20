@@ -6,17 +6,13 @@ import Rating from '~/components/Rating';
 import { LanguageIcon, NewIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
-function MainContent() {
+function MainContent({ data = [] }) {
+    const { title, description, rating, rank, studentsCount, user = {}, updatedAt, language } = data;
     return (
         <div className={cx('course-landing-page__main-content')}>
             <div className={cx('ud-text-sm', 'clp-lead')}>
-                <h1 className={cx('ud-heading-xl', 'clp-lead__title')}>
-                    Crash Course: Build a Full-Stack Web App in a Weekend!
-                </h1>
-                <div className={cx('ud-text-md', 'clp-lead__headline')}>
-                    A quick, fun, and hands-on introduction to web development. Build a complete app with HTML, CSS,
-                    JavaScript, and React!
-                </div>
+                <h1 className={cx('ud-heading-xl', 'clp-lead__title')}>{title}</h1>
+                <div className={cx('ud-text-md', 'clp-lead__headline')}>{description}</div>
                 <div className={cx('clp-lead__badge-ratings-enrollment')}>
                     <div className={cx('clp-lead__element-item', 'clp-lead__element-item--row')}>
                         <Button
@@ -25,11 +21,11 @@ function MainContent() {
                             className={cx('ud-btn-link', 'ud-heading-md', 'ud-text-sm', 'rating-wrapper')}
                         >
                             <span className={cx('star-rating-wrapper')}>
-                                <span className={cx('ud-heading-sm', 'rating-number')}>4,8</span>
+                                <span className={cx('ud-heading-sm', 'rating-number')}>{rating}</span>
                                 <Rating />
                             </span>
-                            <span>(2639 xếp hạng)</span>
-                            <div className={cx('enrollment')}>19.830 học viên</div>
+                            <span>{`(${rank} xếp hạng)`}</span>
+                            <div className={cx('enrollment')}>{studentsCount}</div>
                         </Button>
                     </div>
                 </div>
@@ -42,7 +38,7 @@ function MainContent() {
                                 size={cx('ud-btn-large')}
                                 className={cx('ud-btn-link', 'ud-heading-md', 'ud-text-sm', 'ud-instructor-links')}
                             >
-                                <span>Jonas Schmedtmann</span>
+                                <span>{user.fullName}</span>
                             </Button>
                         </span>
                     </div>
@@ -58,12 +54,12 @@ function MainContent() {
                                     'last-update-date__icon',
                                 )}
                             />
-                            <span>Lần cập nhật gần đây nhất 11/2023</span>
+                            <span>Lần cập nhật gần đây nhất {updatedAt}</span>
                         </div>
                     </div>
                     <div className={cx('clp-lead__element-item', 'clp-lead__locale')}>
                         <LanguageIcon classNames={cx('ud-icon', 'ud-icon-xsmall', 'ud-icon-color-neutral', 'icon')} />
-                        <font _mstmutation="1">Tiếng Anh</font>
+                        <font _mstmutation="1">{language}</font>
                     </div>
                 </div>
             </div>

@@ -9,10 +9,19 @@ function DetailLesson({ data }) {
         <div className={cx('accordion-panel-module-content-wrapper')}>
             <div className={cx('ud-accordion-panel-content', '')}>
                 <ul className={cx('ud-unstyled-list', 'ud-block-list')}>
-                    <DetailLessonItem video />
+                    {data.map((item) => {
+                        return (
+                            <DetailLessonItem
+                                key={item.id}
+                                title={item.title}
+                                duration={item.lesson['duration']}
+                                video
+                            />
+                        );
+                    })}
+                    {/* <DetailLessonItem doc title="hello" />
                     <DetailLessonItem doc title="hello" />
-                    <DetailLessonItem doc title="hello" />
-                    <DetailLessonItem doc title="hello" />
+                    <DetailLessonItem doc title="hello" /> */}
                 </ul>
             </div>
         </div>

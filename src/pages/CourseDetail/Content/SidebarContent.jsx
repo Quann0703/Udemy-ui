@@ -73,8 +73,9 @@ const LISTINCENTIVE = [
         content: 'Giấy chứng nhận hoàn thành',
     },
 ];
-function SidebarContent({ data, onClick }) {
+function SidebarContent({ isRegistered, data = [], onClick }) {
     const [none, setNone] = useState(false);
+    const { image, price } = data;
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
@@ -104,10 +105,7 @@ function SidebarContent({ data, onClick }) {
                                 className={cx('ud-heading-md', 'intro-asset-placeholder')}
                             >
                                 <span className={cx('intro-asset-img')}>
-                                    <Image
-                                        src="https://img-c.udemycdn.com/course/240x135/4993934_0107_4.jpg"
-                                        className={cx('asset-img')}
-                                    />
+                                    <Image src={image} className={cx('asset-img')} />
                                 </span>
                                 <span className={cx('intro-asset-overlay', 'intro-asset--gradient')}></span>
                                 <span className={cx('ud-play-overlay')}>
@@ -130,41 +128,60 @@ function SidebarContent({ data, onClick }) {
                                             <div className={cx('base-price-text')}>
                                                 <div className={cx('price-part', 'ud-heading-xxl')}>
                                                     <span>
-                                                        <span>₫&nbsp;1.699.000</span>
+                                                        <span>₫&nbsp;{price}</span>
                                                     </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div className={cx('buy-box-item', 'buy-box-discount')}></div>
-                                    <div className={cx('buy-box-item', 'buy-box-add-to-cart')}>
-                                        <div className={cx('add-to-cart-block')}>
+                                    {!isRegistered ? (
+                                        <>
+                                            <div className={cx('buy-box-item', 'buy-box-add-to-cart')}>
+                                                <div className={cx('add-to-cart-block')}>
+                                                    <Button
+                                                        size={cx('ud-btn-large')}
+                                                        className={cx('ud-heading-md', 'ud-btn-brand', 'add-to-cart')}
+                                                    >
+                                                        Thêm vào giỏ hàng
+                                                    </Button>
+                                                </div>
+                                                <div>
+                                                    <Button
+                                                        size={cx('ud-btn-large')}
+                                                        secondary={cx('ud-btn-secondary')}
+                                                        className={cx(
+                                                            'ud-heading-md',
+                                                            'ud-btn-icon',
+                                                            'ud-btn-icon-large',
+                                                        )}
+                                                    >
+                                                        <WishListIcon classNames={cx('style-icon')} />
+                                                    </Button>
+                                                </div>
+                                            </div>
+                                            <div className={cx('buy-box-item', 'buy-box-buy-button')}>
+                                                <Button
+                                                    primary={cx('ud-btn-primary')}
+                                                    size={cx('ud-btn-large')}
+                                                    className={cx('ud-heading-md', 'btn-express-checkout')}
+                                                >
+                                                    <span>Mua ngay</span>
+                                                </Button>
+                                            </div>
+                                        </>
+                                    ) : (
+                                        <div className={cx('buy-box-item', 'buy-box-buy-button')}>
                                             <Button
+                                                to="/watch/html-css"
+                                                primary={cx('ud-btn-primary')}
                                                 size={cx('ud-btn-large')}
-                                                className={cx('ud-heading-md', 'ud-btn-brand', 'add-to-cart')}
+                                                className={cx('ud-heading-md', 'btn-express-checkout')}
                                             >
-                                                Thêm vào giỏ hàng
+                                                <span>Đi đến học tập</span>
                                             </Button>
                                         </div>
-                                        <div>
-                                            <Button
-                                                size={cx('ud-btn-large')}
-                                                secondary={cx('ud-btn-secondary')}
-                                                className={cx('ud-heading-md', 'ud-btn-icon', 'ud-btn-icon-large')}
-                                            >
-                                                <WishListIcon classNames={cx('style-icon')} />
-                                            </Button>
-                                        </div>
-                                    </div>
-                                    <div className={cx('buy-box-item', 'buy-box-buy-button')}>
-                                        <Button
-                                            primary={cx('ud-btn-primary')}
-                                            size={cx('ud-btn-large')}
-                                            className={cx('ud-heading-md', 'btn-express-checkout')}
-                                        >
-                                            <span>Mua ngay</span>
-                                        </Button>
-                                    </div>
+                                    )}
                                 </div>
                             </div>
                             <div className={cx('purchase-local-incentive')}>

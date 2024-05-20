@@ -1,15 +1,18 @@
 import classNames from 'classnames/bind';
+import MarkdownParser from '~/components/MarkdownParser';
 
 import styles from './Describle.module.scss';
-import { BulletIcon } from '~/components/Icons';
+// import { BulletIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
-function Request() {
+function Request({ data }) {
+    const { require } = data;
     return (
         <div className={cx('component-margin')}>
             <h2 className={cx('ud-heading-xl', 'request-title')}>Yêu cầu</h2>
             <ul className={cx('ud-unstyled-list', 'ud-block-list')}>
-                <li>
+                <MarkdownParser content={require} style={{ '--font-size': '1.6rem', '--line-height': 2 }} />
+                {/* <li>
                     <div
                         className={cx(
                             'ud-block-list-item',
@@ -71,7 +74,7 @@ function Request() {
                         />
                         <div className={cx('request-content')}>No programming experience needed!</div>
                     </div>
-                </li>
+                </li> */}
             </ul>
         </div>
     );

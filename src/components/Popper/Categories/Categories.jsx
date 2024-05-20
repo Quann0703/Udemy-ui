@@ -16,7 +16,6 @@ function Categories({ items = [], children, hideOnClick = false, onChange = defa
     useEffect(() => {
         setHistory([{ data: items }]);
     }, [items]);
-    console.log(items);
     const current = history[history.length - 1];
     const renderItems = () => {
         return current.data.map((item, index) => {

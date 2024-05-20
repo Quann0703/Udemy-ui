@@ -1,10 +1,12 @@
 import classNames from 'classnames/bind';
+import MarkdownParser from '~/components/MarkdownParser';
 
 import styles from './Lesson.module.scss';
-import LessonContentItem from './LessonContentItem';
+// import LessonContentItem from './LessonContentItem';
 
 const cx = classNames.bind(styles);
-function LessonContent() {
+function LessonContent({ data }) {
+    const { content } = data;
     return (
         <div className={cx('component-margin', 'what-you-will-learn')}>
             <h2 className={cx('ud-heading-xl', 'what-you-will-learn-title')}>Nội dung bài học</h2>
@@ -17,13 +19,7 @@ function LessonContent() {
                         'learn-objectives-list-two-column-layout',
                     )}
                 >
-                    <LessonContentItem />
-                    <LessonContentItem />
-                    <LessonContentItem />
-                    <LessonContentItem />
-                    <LessonContentItem />
-                    <LessonContentItem />
-                    <LessonContentItem />
+                    <MarkdownParser content={content} style={{ '--font-size': '1.6rem', '--line-height': 2 }} />
                 </ul>
             </div>
         </div>
