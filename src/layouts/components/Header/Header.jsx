@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEarthAsia, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
+import { useSelector } from 'react-redux';
 
 import images from '~/assets/images';
 import styles from './Header.module.scss';
@@ -15,6 +16,9 @@ import Image from '~/components/Image';
 import * as categoryService from '~/services/categoryService';
 import { useEffect, useState } from 'react';
 import Categories from '~/components/Popper/Categories';
+import useAuthModal from '~/hooks/useAuthModal';
+import { openAuthModal } from '~/store/actions/authModalAction';
+import useAccount from '~/hooks/useAccount';
 
 const cx = classNames.bind(styles);
 
@@ -73,6 +77,8 @@ const ACTION = {
 
 function Header() {
     const [categories, setCategories] = useState();
+    const cart = useSelector((state) => state.cart);
+
     const handleMenuChange = (menuItem) => {
         switch (menuItem.type) {
             case 'language':
@@ -81,6 +87,14 @@ function Header() {
             default:
         }
     };
+    const getTotalQuantity = () => {
+        let total = 0;
+        cart.forEach((item) => {
+            total += item.quantity;
+        });
+        return total;
+    };
+
     useEffect(() => {
         categoryService.getCategories().then((res) => {
             const newData = res.map((item) => {
@@ -102,7 +116,6 @@ function Header() {
         });
     }, []);
 
-    const currentUser = true;
     const userMenu = [
         {
             title: 'Học tập',
@@ -133,9 +146,19 @@ function Header() {
         {
             title: 'Đăng xuất',
             to: '/',
+            type: 'logout',
             separate: true,
         },
     ];
+    const { dispatch } = useAuthModal();
+    const {
+        state: { isLogin, userInfo },
+    } = useAccount();
+    const handleShowSignIn = () => {
+        dispatch(openAuthModal());
+    };
+    console.log(isLogin);
+    console.log(userInfo);
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -159,7 +182,7 @@ function Header() {
                 </Categories>
                 <Search />
                 <div className={cx('actions')}>
-                    {currentUser ? (
+                    {isLogin ? (
                         <div className={cx('current-user')}>
                             <Group linkTo business content={ACTION.UDEMYBUSINESS}>
                                 <div>
@@ -220,7 +243,7 @@ function Header() {
                                             )}
                                             title="4 items in the cart"
                                         >
-                                            4
+                                            {getTotalQuantity() || 0}
                                         </span>
                                     </Button>
                                 </div>
@@ -309,7 +332,7 @@ function Header() {
                                             )}
                                             title="4 items in the cart"
                                         >
-                                            4
+                                            {getTotalQuantity() || 0}
                                         </span>
                                     </Button>
                                 </div>
@@ -319,6 +342,8 @@ function Header() {
                                 primary={cx('ud-btn-primary')}
                                 size={cx('ud-btn-medium')}
                                 className={cx('ud-heading-sm')}
+                                onClick={handleShowSignIn}
+                                style={{ marginLeft: 15 }}
                             >
                                 <span>sign in</span>
                             </Button>
@@ -331,8 +356,8 @@ function Header() {
                             </Button>
                         </>
                     )}
-                    <Menu isUser={currentUser} items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
-                        {currentUser ? (
+                    <Menu isUser={isLogin} items={isLogin ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
+                        {isLogin ? (
                             <Image
                                 className={cx('user-avatar')}
                                 src="https://img-c.udemycdn.com/user/75x75/245266240_ca52.jpg"

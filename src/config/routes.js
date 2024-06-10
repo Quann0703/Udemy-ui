@@ -5,8 +5,10 @@ const routes = {
     profile: '/profile',
     search: '/search',
     course: '/courses/:slug',
+    login: '/login',
+    register: '/register',
     me: '/me',
-    watch: '/watch/:slug',
+    watch: '/watch',
     myCourses: {
         path: '/me',
         learning: 'learning',

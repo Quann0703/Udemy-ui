@@ -1,17 +1,51 @@
 import classNames from 'classnames/bind';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import styles from './Header.module.scss';
 import config from '~/config';
 import images from '~/assets/images';
-import { ExpandIcon, MoreIcon, ProgressIcon, ShareIcon } from '~/components/Icons';
+import { ExpandIcon, MoreIcon, ShareIcon } from '~/components/Icons';
 import Button from '~/components/Button';
 import Progress from '~/components/Popper/Progress';
+import CircularProgressBar from '~/components/Progress';
+import { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
-function Header() {
+function Header({ track, process, isQuiz, onCloseQuiz }) {
+    const [userProcess, setUserProcess] = useState(0);
+    const navigate = useNavigate();
+    const { steps } = track;
+    useEffect(() => {
+        const calculateProgress = () => {
+            if (steps.length === 0) return 0;
+            return (process.length / steps.length) * 100;
+        };
+
+        const timer = setTimeout(() => {
+            setUserProcess(calculateProgress());
+        }, 2000);
+
+        return () => clearTimeout(timer);
+    }, [process, steps]);
+
     return (
         <div className={cx('app--row', 'wrapper')}>
+            {isQuiz && (
+                <div
+                    className={cx('btn-back')}
+                    onClick={() => {
+                        if (isQuiz) {
+                            onCloseQuiz();
+                        } else {
+                            navigate('/');
+                        }
+                    }}
+                >
+                    <FontAwesomeIcon className={cx('icon')} icon={faAngleLeft} />
+                </div>
+            )}
             <div className={cx('header-content')}>
                 <div className={cx('header-inner')}>
                     <div className={cx('logo')}>
@@ -33,19 +67,19 @@ function Header() {
                                 href="/course/web-design-secrets/"
                                 style={{ WebkitLineClamp: 1 }}
                             >
-                                Web Design for Web Developers: Build Beautiful Websites!
+                                {track.title}
                             </a>
                         </h1>
                         <div className={cx('header--flex')} />
                     </div>
-                    <Progress>
+                    <Progress process={process} step={steps}>
                         <div className={cx('popper-module--popper')}>
                             <Button
                                 size={cx('ud-btn-large')}
                                 className={cx('ud-btn-link', 'ud-text-sm', 'progress--progress-btn')}
                             >
                                 <span className={cx('progress--progress-circle')}>
-                                    <ProgressIcon />
+                                    <CircularProgressBar size={30} progress={userProcess} />
                                 </span>
                                 <span className={cx('progress--progress-label', 'progress--progress-text')}>
                                     Tiến độ của bạn

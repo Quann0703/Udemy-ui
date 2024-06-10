@@ -3,9 +3,29 @@ import HeadlessTippy from '@tippyjs/react/headless';
 
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import styles from './Progress.module.scss';
+import { useEffect, useState } from 'react';
 
 const cx = classNames.bind(styles);
-function Progress({ children, hideOnClick = true }) {
+function Progress({ children, hideOnClick = true, step, process }) {
+    const [processes, setProcesses] = useState({
+        step: 0,
+        process: 0,
+    });
+    useEffect(() => {
+        const longProcess = () => {
+            return {
+                process: process.length,
+                step: step.length,
+            };
+        };
+
+        const timer = setTimeout(() => {
+            setProcesses(longProcess());
+        }, 2000);
+
+        return () => clearTimeout(timer);
+    }, [process, step]);
+
     const renderResult = (attrs) => {
         return (
             <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
@@ -19,7 +39,10 @@ function Progress({ children, hideOnClick = true }) {
                     >
                         <div className={cx('popover-module--inner')}>
                             <div className={cx('progress-popover-content--container')}>
-                                <div className={cx('ud-heading-sm')}>Đã hoàn thành 0/21.</div>
+                                <div className={cx('ud-heading-sm')}>
+                                    Đã hoàn thành
+                                    {processes.process}/{processes.step}.
+                                </div>
                             </div>
                         </div>
                         <div

@@ -6,10 +6,12 @@ import { MoreIcon, PlayOverlayIcon } from '~/components/Icons';
 import Button from '~/components/Button';
 import More from '~/components/More';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
-function CourseMe() {
+function CourseMe({ image, title, creator, process, slug }) {
     const [showMore, setShowMore] = useState(false);
+    const navigate = useNavigate();
     const handleShowMore = () => {
         setShowMore((prev) => {
             return !prev;
@@ -21,9 +23,9 @@ function CourseMe() {
                 <div className={cx('course-card-module--container', 'course-card-module--medium')}>
                     <div className={cx('course-card-module--image-container')}>
                         <Image
-                            src="https://img-c.udemycdn.com/course/240x135/473160_d929_3.jpg"
+                            src={image}
                             alt=""
-                            srcSet="https://img-c.udemycdn.com/course/240x135/473160_d929_3.jpg 1x, https://img-c.udemycdn.com/course/480x270/473160_d929_3.jpg 2x"
+                            srcSet={`${image} 1x, ${image} 2x`}
                             className={cx('enrolled-course-card--image')}
                             width={240}
                             height={135}
@@ -42,15 +44,13 @@ function CourseMe() {
                             <div className={cx('course-card-title-module--title')}>
                                 <h3 className={cx('ud-heading-md', 'course-card-title-module--course-title')}>
                                     <a href="/course-dashboard-redirect/?course_id=473160" className={cx('color-text')}>
-                                        Web Design for Web Developers: Build Beautiful Websites!
+                                        {title}
                                     </a>
                                 </h3>
                             </div>
                         </div>
                         <div className={cx('ud-text-xs')}>
-                            <div className={cx('course-card-instructors-module--instructor-list')}>
-                                Jonas Schmedtmann
-                            </div>
+                            <div className={cx('course-card-instructors-module--instructor-list')}>{creator}</div>
                         </div>
                         <div className={cx('course-card-module--price-text-container')} />
                         <div className={cx('course-card-module--badges-container')}>
@@ -68,10 +68,13 @@ function CourseMe() {
                                 className={cx('ud-meter', 'meter-module--meter')}
                                 aria-label="Hoàn thành 0%"
                                 data-purpose="meter"
-                                style={{ transform: 'scaleX(0)' }}
+                                style={{ transform: `scaleX(${process})` }}
                             />
                         </div>
-                        <div className={cx('ud-text-xs', 'enrolled-course-card--progress-and-rating')}>
+                        <div
+                            className={cx('ud-text-xs', 'enrolled-course-card--progress-and-rating')}
+                            onClick={() => navigate(`/watch?course=${slug}`)}
+                        >
                             BẮT ĐẦU KHÓA HỌC
                         </div>
                     </div>

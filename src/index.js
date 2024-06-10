@@ -8,14 +8,18 @@ import App from '~/App';
 import reportWebVitals from './reportWebVitals';
 import GlobalStyles from './components/GlobalStyles';
 import Provider from './store/provider';
+import { Provider as ProviderRedux } from 'react-redux';
+import { store } from './redux/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     // <React.StrictMode>
     <GlobalStyles>
-        <Provider>
-            <App />
-        </Provider>
+        <ProviderRedux store={store}>
+            <Provider>
+                <App />
+            </Provider>
+        </ProviderRedux>
     </GlobalStyles>,
     // </React.StrictMode>,
 );

@@ -41,7 +41,7 @@ function Categories({ items = [], children, hideOnClick = false, onChange = defa
     const renderResult = (attrs) => {
         return (
             <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
-                <PopperWrapper className={cx('menu-popper', 'ud-unstyled-list', 'ud-block-list')}>
+                <PopperWrapper classNames={cx('menu-popper', 'ud-unstyled-list', 'ud-block-list')}>
                     <div className={cx('menu-body')}>
                         {history.length > 1 && <Header title="Chủ đề phổ biến" onBack={handdleBack} />}
                         {renderItems()}

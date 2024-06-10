@@ -1,10 +1,23 @@
 import classNames from 'classnames/bind';
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import styles from './CartCheckOut.module.scss';
 import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 function CartCheckOut() {
+    const cart = useSelector((state) => state.cart);
+    const navigate = useNavigate();
+    const getTotal = () => {
+        let totalQuantity = 0;
+        let totalPrice = 0;
+        cart.forEach((item) => {
+            totalQuantity += item.quantity;
+            totalPrice += item.price * item.quantity;
+        });
+        return { totalPrice, totalQuantity };
+    };
     return (
         <div>
             <div className={cx('purchase-buy-box-main')}>
@@ -15,7 +28,7 @@ function CartCheckOut() {
                             <div className={cx('base-price-text')}>
                                 <div className={cx('price-part', 'ud-heading-xxl')}>
                                     <span>
-                                        <span>₫&nbsp;1.699.000</span>
+                                        <span>₫&nbsp;{getTotal().totalPrice}</span>
                                     </span>
                                 </div>
                             </div>
@@ -23,7 +36,7 @@ function CartCheckOut() {
                                 <div>
                                     <span>
                                         <s>
-                                            <span>₫ 6.196.000</span>
+                                            <span>₫ {getTotal().totalPrice}</span>
                                         </s>
                                     </span>
                                 </div>
@@ -38,6 +51,7 @@ function CartCheckOut() {
                             <Button
                                 size={cx('ud-btn-large')}
                                 className={cx('ud-heading-md', 'ud-btn-brand', 'add-to-cart')}
+                                onClick={() => navigate(`/payment`)}
                             >
                                 Thanh Toán
                             </Button>

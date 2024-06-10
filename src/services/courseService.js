@@ -6,4 +6,7 @@ const getCombinedCourse = async () => {
 const getCourseBySlug = async (slug) => {
     return await httpRequest.get('/courses/' + slug).then((res) => res.data);
 };
-export { getCombinedCourse, getCourseBySlug };
+const getRegisteredCourses = async () => {
+    return await httpRequest.get('/courses/registered').then((res) => res.data);
+};
+export { getCombinedCourse, getCourseBySlug, getRegisteredCourses };

@@ -7,7 +7,7 @@ import MdEditor from '../MdEditor';
 import Button from '../Button';
 
 const cx = classNames.bind(styles);
-function CommentBox() {
+function CommentBox({ onAddComment, reply, form, onAddCommentEdit, parentId }) {
     const [value, setValue] = useState('');
     const [show, setShow] = useState(false);
     const [active, setActive] = useState(false);
@@ -22,6 +22,8 @@ function CommentBox() {
     useEffect(() => {
         setActive(value !== '');
     }, [value]);
+
+    // console.log(parentId);
     return (
         <div className={cx('wrapper')}>
             <div className={cx('avatar-wrapper')}>
@@ -46,15 +48,30 @@ function CommentBox() {
                         >
                             <span>Hủy</span>
                         </Button>
-                        <Button
-                            size={cx('ud-btn-medium')}
-                            primary={cx('ud-btn-primary')}
-                            className={cx('ud-heading-sm', 'btn-style', {
-                                active: active,
-                            })}
-                        >
-                            <span>Bình luận</span>
-                        </Button>
+                        {form && (
+                            <Button
+                                size={cx('ud-btn-medium')}
+                                primary={cx('ud-btn-primary')}
+                                className={cx('ud-heading-sm', 'btn-style', {
+                                    active: active,
+                                })}
+                                onClick={(event) => onAddComment(event, value)}
+                            >
+                                <span>Bình luận</span>
+                            </Button>
+                        )}
+                        {reply && (
+                            <Button
+                                size={cx('ud-btn-medium')}
+                                primary={cx('ud-btn-primary')}
+                                className={cx('ud-heading-sm', 'btn-style', {
+                                    active: active,
+                                })}
+                                onClick={(event) => onAddCommentEdit(event, value, parentId)}
+                            >
+                                <span>Bình luận</span>
+                            </Button>
+                        )}
                     </div>
                 )}
             </div>

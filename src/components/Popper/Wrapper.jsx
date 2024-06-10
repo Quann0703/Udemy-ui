@@ -5,10 +5,10 @@ import styles from './Popper.module.scss';
 import { ArrowIcon } from '../Icons';
 
 const cx = classNames.bind(styles);
-function Wrapper({ children, className, isArrow }) {
+function Wrapper({ children, classNames, isArrow }) {
     return (
         <>
-            <div className={cx('wrapper', className)}>{children}</div>
+            <div className={cx('wrapper', classNames)}>{children}</div>
             {isArrow && <ArrowIcon classNames={cx('arrow')} />}
         </>
     );

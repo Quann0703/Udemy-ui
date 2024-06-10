@@ -12,7 +12,7 @@ function WelcomeUser() {
                 <h2 className={cx('ud-heading-serif-xl', 'learning-title')}>Trần Văn ơi, hãy bắt đầu học nào</h2>
                 <div className={cx('learning-link')}>
                     <Button
-                        href="/me/learning"
+                        to="/me/learning"
                         primary={cx('ud-btn-ghost')}
                         size={cx('ud-btn-large')}
                         className={cx('ud-heading-md', 'ud-link-underline')}

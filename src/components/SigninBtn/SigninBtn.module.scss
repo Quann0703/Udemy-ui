@@ -1,0 +1,32 @@
+.wrapper {
+    --height: 44px;
+    background-color: #fff;
+    border: 2px solid #dce0e3;
+    border-radius: 44px;
+    display: inline-block;
+    height: var(--height);
+    line-height: var(--height);
+    padding-left: 16px;
+    position: relative;
+    text-align: center;
+    width: 320px;
+    + .wrapper {
+        margin-top: 14px;
+    }
+}
+.icon {
+    left: 16px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.title {
+    color: #35414c;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 40px;
+    outline: 0;
+    text-align: center;
+}

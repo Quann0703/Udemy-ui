@@ -6,10 +6,11 @@ import { useRef, useState } from 'react';
 
 import styles from './Video.module.scss';
 import videos from '~/assets/videos';
+import YouTube from 'react-youtube';
 
 const cx = classnames.bind(styles);
 
-function VideoPlayer({ title, video, type }) {
+function VideoPlayer({ title, video, type, onStateChange }) {
     const [isPlay, setIsPlay] = useState(false);
     const [showButton, setShowButton] = useState(false);
     const videoRef = useRef();
@@ -56,15 +57,18 @@ function VideoPlayer({ title, video, type }) {
         <div className={cx('wrapper')}>
             <div className={cx('player')} onClick={handlePlay} onDoubleClick={handleDblClick}>
                 {type && type === 'youtube' ? (
-                    <iframe
-                        className={cx('video-steam')}
-                        ref={videoRef}
-                        frameBorder={0}
-                        allowFullScreen
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
+                    <YouTube
+                        id="embed-youtube"
                         title={title}
-                        src={`https://www.youtube.com/embed/${video}?autoplay=1&mute=0&controls=1&origin=https%3A%2F%2Ffullstack.edu.vn&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&widgetid=1`}
+                        videoId={video}
+                        className={cx('video-steam')}
+                        iframeClassName={cx('video-steam')}
+                        onStateChange={onStateChange}
+                        opts={{
+                            playerVars: {
+                                autoplay: 1,
+                            },
+                        }}
                     />
                 ) : (
                     <>

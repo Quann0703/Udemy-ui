@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 import styles from './Group.module.scss';
 import Image from '~/components/Image';
 const cx = classNames.bind(styles);
-function Profile() {
+function Profile({ fullName, email }) {
     return (
         <a href="/profile" className={cx('user-profile-dropdown-module--user-section')}>
             <Image
@@ -17,8 +17,8 @@ function Profile() {
             />
             <div className={cx('user-details')}>
                 <div>
-                    <div className={cx('ud-heading-md')}>Trần Văn Quân</div>
-                    <div className={cx('ud-text-xs', 'user-profile-module--email')}>tranquan07112003@gmail.com</div>
+                    <div className={cx('ud-heading-md')}>{fullName}</div>
+                    <div className={cx('ud-text-xs', 'user-profile-module--email')}>{email}</div>
                 </div>
             </div>
         </a>

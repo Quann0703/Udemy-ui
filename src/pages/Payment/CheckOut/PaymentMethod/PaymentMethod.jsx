@@ -6,7 +6,7 @@ import PaymentMethodItem from './PaymentMethodItem';
 import { useState } from 'react';
 
 const cx = classNames.bind(styles);
-function PaymentMethod() {
+function PaymentMethod({ info }) {
     const [showOptions, setShowOptions] = useState({
         visa: false,
         payment: false,
@@ -19,6 +19,7 @@ function PaymentMethod() {
             [option]: !prevOptions[option],
         }));
     };
+    console.log(info);
     return (
         <section className={cx('payment__method-container')}>
             <div className={cx('payment__method-title')}>
@@ -37,7 +38,7 @@ function PaymentMethod() {
                                     <div className={cx('payment-credit-card--payment-credit-card')}>
                                         <section>
                                             <h4 className={cx('ud-heading-sm')}>Tên trên thẻ</h4>
-                                            <p className={cx('ud-text-sm')}>TRAN VAN QUAN</p>
+                                            <p className={cx('ud-text-sm')}>{info?.username}</p>
                                         </section>
                                         <section>
                                             <h4 className={cx('ud-heading-sm')}>Số thẻ</h4>

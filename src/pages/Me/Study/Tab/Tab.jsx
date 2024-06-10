@@ -1,23 +1,40 @@
 import classNames from 'classnames/bind';
 import { useOutletContext } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 import styles from './Tab.module.scss';
 import TimeLock from '~/components/TimeLock';
 import { CourseHome, CourseMe } from '~/components/Course';
 import Search from './Search';
 import Tool from './Tool';
+import { getRegisteredCourses } from '~/services/courseService';
 
 const cx = classNames.bind(styles);
 function Tab() {
     const { tab } = useOutletContext();
-    console.log(tab);
+    const [studyData, setStudyData] = useState([]);
+
+    useEffect(() => {
+        getRegisteredCourses().then((res) => {
+            setStudyData(res);
+        });
+    }, []);
+
     return (
         <>
             {tab === 'learning' && (
                 <div className={cx('my-courses__main-content', 'ud-container')}>
                     <TimeLock />
                     <div className={cx('my-courses__course-card-grid')}>
-                        <CourseMe />
+                        {studyData.map((study) => (
+                            <CourseMe
+                                title={study.title}
+                                image={study.image}
+                                creator={study.user.fullName}
+                                process={study.userProcess}
+                                slug={study.slug}
+                            />
+                        ))}
                     </div>
                 </div>
             )}

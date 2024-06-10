@@ -71,7 +71,7 @@ function Preview({ course, track, backClick }) {
                                     {/* <PreviewItem current />
                                     <PreviewItem />
                                     <PreviewItem /> */}
-                                    {step.map((item) => {
+                                    {step.slice(0, 2).map((item) => {
                                         return (
                                             <div key={item.id}>
                                                 <PreviewItem

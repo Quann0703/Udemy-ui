@@ -37,3 +37,21 @@
         overflow-y: overlay;
     }
 }
+.comment-btn {
+    background-color: #fff;
+    border-radius: 999px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #a435f0;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    position: absolute;
+    right: 2%;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    .title {
+        margin-left: 8px;
+    }
+}

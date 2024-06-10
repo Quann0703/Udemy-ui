@@ -1,0 +1,33 @@
+.progress-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.progress-circle svg {
+    transform: rotate(-90deg);
+}
+
+.progress-circle-background {
+    fill: none;
+    stroke: #e6e6e6;
+}
+
+.progress-circle-progress {
+    fill: none;
+    stroke: #4caf50;
+    transition: stroke-dashoffset 0.35s;
+    transform-origin: center;
+}
+
+.progress-circle-text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}

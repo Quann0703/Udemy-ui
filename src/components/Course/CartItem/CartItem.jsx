@@ -1,13 +1,33 @@
 import classNames from 'classnames/bind';
+import { useDispatch } from 'react-redux';
 
 import styles from './CartItem.module.scss';
+import { incrementQuantity, decrementQuantity, removeItem } from '~/redux/cartSlice';
 import Image from '~/components/Image';
 import Rating from '~/components/Rating';
 import { BulletIcon, OfferIcon } from '~/components/Icons';
 import Button from '~/components/Button';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
-function CartItem({ updated, bestseller, wishList, cart, cartItem, resultItem }) {
+function CartItem({
+    id,
+    updated,
+    bestseller,
+    wishList,
+    cart,
+    cartItem,
+    resultItem,
+    image,
+    title,
+    slug,
+    creator,
+    rating,
+    rank,
+    language,
+    price,
+}) {
+    const dispatch = useDispatch();
     return (
         <div className={cx('style__shopping-item-wrapper')}>
             <div className={cx('shopping__item-container', 'shopping__item-with-inline')}>
@@ -18,7 +38,7 @@ function CartItem({ updated, bestseller, wishList, cart, cartItem, resultItem })
                                 'shopping-item--course-image': cartItem,
                                 'result-item--course-image': resultItem,
                             })}
-                            src="https://img-c.udemycdn.com/course/240x135/258316_55e9_12.jpg"
+                            src={image}
                             alt=""
                             height={68}
                             width={120}
@@ -28,12 +48,10 @@ function CartItem({ updated, bestseller, wishList, cart, cartItem, resultItem })
                 </div>
                 <div className={cx('shopping__item-header')}>
                     <h3 className={cx('ud-heading-md ', 'shopping-item--course-title')}>
-                        <a href="/">Complete C# Unity Game Developer 2D</a>
+                        <Link to={`/courses/${slug}`}>{title}</Link>
                     </h3>
                     <div className={cx('ud-text-xs', 'shopping__item-instructor')}>
-                        <span className={cx('shopping-item--instructor-list')}>
-                            Bởi GameDev.tv Team và 2 giảng viên khác
-                        </span>
+                        <span className={cx('shopping-item--instructor-list')}>{creator}</span>
                     </div>
                 </div>
                 <div className={cx('shopping__item-badges')}>
@@ -51,16 +69,16 @@ function CartItem({ updated, bestseller, wishList, cart, cartItem, resultItem })
                 <div className={cx('shopping__item-rating')}>
                     <div className={cx('star__rating-wrapper')}>
                         <div className={cx('rating-inner')}>
-                            <span className={cx('ud-heading-sm', 'star__rating-rank')}>4,7</span>
+                            <span className={cx('ud-heading-sm', 'star__rating-rank')}>{rating}</span>
                             <Rating />
                         </div>
-                        <span className={cx('ud-text-xs', 'shopping__item-review')}>(103.147 xếp hạng)</span>
+                        <span className={cx('ud-text-xs', 'shopping__item-review')}>({rank} xếp hạng)</span>
                     </div>
                 </div>
                 <div className={cx('ud-text-xs', 'shopping__item-meta')}>
-                    <span className={cx('item-meta-hours')}>Tổng số 18.5 giờ </span>
+                    <span className={cx('item-meta-hours')}>Ngôn ngữ {language} </span>
                     <BulletIcon classNames={cx('ud-icon', 'ud-icon-xxsmall', 'ud-icon-color-subdued')} />
-                    <span className={cx('item-meta-number-lesson')}>140 bài giảng </span>
+                    <span className={cx('item-meta-number-lesson')}> bài giảng </span>
                     <BulletIcon classNames={cx('ud-icon', 'ud-icon-xxsmall', 'ud-icon-color-subdued')} />
                     <span className={cx('item-meta-level')}>Tất cả trình độ</span>
                 </div>
@@ -71,6 +89,7 @@ function CartItem({ updated, bestseller, wishList, cart, cartItem, resultItem })
                                 ghost={cx('ud-btn-ghost')}
                                 size={cx('ud-btn-xsmall')}
                                 className={cx('ud-text-sm', 'btn-action')}
+                                onClick={() => dispatch(removeItem(id))}
                             >
                                 <span>Xóa</span>
                             </Button>
@@ -119,7 +138,7 @@ function CartItem({ updated, bestseller, wishList, cart, cartItem, resultItem })
                             )}
                         >
                             <span>
-                                <span>₫&nbsp;249.000</span>
+                                <span>₫&nbsp;{price}</span>
                             </span>
                         </div>
                         <div
@@ -131,7 +150,7 @@ function CartItem({ updated, bestseller, wishList, cart, cartItem, resultItem })
                         >
                             <span>
                                 <s>
-                                    <span>₫&nbsp;2.399.000</span>
+                                    <span>₫&nbsp;{price}</span>
                                 </s>
                             </span>
                         </div>

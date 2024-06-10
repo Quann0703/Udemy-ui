@@ -5,6 +5,9 @@
     color: #2d2f31 !important;
     display: flex;
     position: relative;
+    + .item-card-module {
+        margin-top: 10px;
+    }
 }
 .item-card-img-wrapper {
     width: 6.4rem;

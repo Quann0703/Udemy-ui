@@ -2,15 +2,40 @@ import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 import 'tippy.js/dist/tippy.css'; // optional
 import HeadlessTippy from '@tippyjs/react/headless';
+import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
 
 import styles from './Group.module.scss';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import GroupBtn from './GroupBtn';
 import { CourseAction } from '~/components/Course';
 import Header from './Header';
+import { getRegisteredCourses } from '~/services/courseService';
+import useAccount from '~/hooks/useAccount';
 
 const cx = classNames.bind(styles);
 function Group({ linkTo, cart, study, wishlist, business, notification, children, content = {} }) {
+    const carts = useSelector((state) => state.cart);
+    const [studyData, setStudyData] = useState([]);
+    const { state } = useAccount();
+    useEffect(() => {
+        if (state.isLogin) {
+            getRegisteredCourses().then((res) => {
+                setStudyData(res);
+            });
+        }
+    }, []);
+
+    const getTotal = () => {
+        let totalQuantity = 0;
+        let totalPrice = 0;
+        carts?.forEach((item) => {
+            totalQuantity += item.quantity;
+            totalPrice += item.price * item.quantity;
+        });
+        return { totalPrice, totalQuantity };
+    };
+
     const renderItems = () => {
         return (
             <>
@@ -22,26 +47,56 @@ function Group({ linkTo, cart, study, wishlist, business, notification, children
                     )}
                     {study && (
                         <div className={cx('shopping-action')}>
-                            <CourseAction study />
+                            {studyData.map((study) => (
+                                <CourseAction
+                                    key={study.id}
+                                    title={study.title}
+                                    image={study.image}
+                                    slug={study.slug}
+                                    study
+                                />
+                            ))}
                         </div>
                     )}
                     {wishlist && (
                         <>
                             <div className={cx('shopping-action')}>
-                                <CourseAction wishlist />
-                                <GroupBtn btnWishlist />
+                                {carts.map((cart) => (
+                                    <div className={cx('margin-top-item')}>
+                                        <CourseAction
+                                            key={cart.id}
+                                            title={cart.title}
+                                            price={cart.price}
+                                            creator={cart.user.fullName}
+                                            image={cart.image}
+                                            cart
+                                        />
+                                        <div className={cx('wrapper-shopping')}>
+                                            <GroupBtn btnWishlist />
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
-                            <div className={cx('shopping-action')}>
+                            {/* <div className={cx('shopping-action')}>
                                 <CourseAction wishlist />
                                 <div className={cx('wrapper-shopping')}>
                                     <GroupBtn btnWishlist />
                                 </div>
-                            </div>
+                            </div> */}
                         </>
                     )}
                     {cart && (
                         <div className={cx('shopping-action')}>
-                            <CourseAction cart />
+                            {carts.map((cart) => (
+                                <CourseAction
+                                    key={cart.id}
+                                    title={cart.title}
+                                    price={cart.price}
+                                    creator={cart.user.fullName}
+                                    image={cart.image}
+                                    cart
+                                />
+                            ))}
                         </div>
                     )}
                     {notification && (
@@ -62,13 +117,17 @@ function Group({ linkTo, cart, study, wishlist, business, notification, children
                                         data-purpose="course-price-text"
                                     >
                                         <span>
-                                            <span>₫ 6.196.000</span>
+                                            <span>₫ {getTotal().totalPrice}</span>
                                         </span>
                                     </div>
                                 </div>
                             </div>
                         )}
-                        <GroupBtn btnButton title={content.textBtn} />
+                        {cart ? (
+                            <GroupBtn btnButton title={content.textBtn} />
+                        ) : (
+                            <GroupBtn btnStudy title={content.textBtn} />
+                        )}
                     </div>
                 )}
             </>

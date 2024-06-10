@@ -20,9 +20,15 @@
 .shopping-action {
     text-align: center;
     padding: 1.6rem;
+    // margin-top: 10px;
     + .shopping-action {
-        // margin-top: 10px;
+        margin-top: 10px;
         border-top: 1px solid #d1d7dc;
+    }
+}
+.margin-top-item {
+    + .margin-top-item {
+        margin-top: 10px;
     }
 }
 .group-btn {
@@ -31,9 +37,9 @@
     margin-bottom: 0;
     // margin-top: 1.6rem;
 }
-// .wrapper-shopping {
-//     padding: 1.6rem;
-// }
+.wrapper-shopping {
+    margin-top: 10px;
+}
 .panel-menu-module--footer {
     background: #fff;
     border-top: 1px solid #d1d7dc;

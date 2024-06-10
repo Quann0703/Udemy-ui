@@ -8,6 +8,7 @@ import useModal from '~/hooks/useModal';
 import { openModal } from '~/store/actions/modalAction';
 
 const cx = classNames.bind(styles);
+
 function Comments({ isShowTracks }) {
     const { state, dispatch } = useModal();
 
@@ -28,7 +29,7 @@ function Comments({ isShowTracks }) {
 
             {state.isOpen && (
                 <Modal>
-                    <Comment />
+                    <Comment currentUserId={14} />
                 </Modal>
             )}
         </div>

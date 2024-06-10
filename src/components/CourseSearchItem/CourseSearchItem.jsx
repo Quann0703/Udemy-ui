@@ -5,10 +5,10 @@ import styles from './CourseSearchItem.module.scss';
 import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
-function CourseSearchItem() {
+function CourseSearchItem({ to, title, image, creator }) {
     return (
         <Link
-            to={`/`}
+            to={to}
             className={cx(
                 'wrapper',
                 'ud-block-list-item',
@@ -16,22 +16,14 @@ function CourseSearchItem() {
                 'ud-search-form-autocomplete-suggestion-block-list-item',
             )}
         >
-            <Image
-                className={cx('img-course')}
-                src="https://img-c.udemycdn.com/course/50x50/4467252_61d1_2.jpg"
-                alt="react"
-                width="32"
-                height="32"
-            />
+            <Image className={cx('img-course')} src={image} alt="react" width="50" height="50" />
 
             <div className={cx('course-info', 'ud-search-form-autocomplete-suggestion-content')}>
-                <p className={cx('name', 'ud-search-form-autocomplete-suggestion-content', 'ud-heading-md')}>
-                    React Ultimate - React.JS Cơ Bản Từ Z Đến A Cho Beginners
-                </p>
+                <p className={cx('name', 'ud-search-form-autocomplete-suggestion-content', 'ud-heading-md')}>{title}</p>
                 <div className={cx('detail', 'ud-search-form-autocomplete-suggestion-details')}>
                     <span className={cx('ud-heading-xs')}>Khóa học</span>
                     <span className={cx('ud-text-xs', 'ud-search-form-autocomplete-suggestion-instructor-name')}>
-                        Hỏi Dân IT với Eric .
+                        {creator}
                     </span>
                 </div>
             </div>

@@ -5,7 +5,8 @@ import { ExitsIcon } from '~/components/Icons';
 import TrackItem from './TrackItem';
 
 const cx = classNames.bind(styles);
-function Track({ onChangeShow }) {
+function Track({ onChangeShow, data, process }) {
+    const { steps } = data;
     return (
         <div className={cx('wrapper')}>
             <div className={cx('container')}>
@@ -16,15 +17,21 @@ function Track({ onChangeShow }) {
                     </button>
                 </header>
                 <div className={cx('track-body')}>
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17].map((i) => (
-                        <TrackItem
-                            key={i}
-                            title={'ReactJS là gì? Tại sao nên học ReactJS?'}
-                            image={'https://i.ytimg.com/vi/z2f7RHgvddc/hq720.jpg'}
-                            duration={'10:00'}
-                            index={i}
-                        />
-                    ))}
+                    {steps.map((item, index) => {
+                        const isCheckExist = process.includes(item.id);
+                        console.log(isCheckExist);
+                        return (
+                            <TrackItem
+                                key={index}
+                                uuid={item.uuid}
+                                title={item.title}
+                                image={item.lesson.image}
+                                duration={item.lesson.duration}
+                                index={index + 1}
+                                isDisabled={!isCheckExist}
+                            />
+                        );
+                    })}
                 </div>
             </div>
             <div className="Tracks_overlay__5cs2-" />

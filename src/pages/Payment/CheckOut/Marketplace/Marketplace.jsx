@@ -4,7 +4,7 @@ import styles from './Marketplace.module.scss';
 import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
-function Marketplace() {
+function Marketplace({ total, makePayment }) {
     return (
         <div className={cx('check__out-summary')}>
             <div className={cx('check__out-content-wrapper')}>
@@ -12,7 +12,7 @@ function Marketplace() {
                     <h2 className={cx('pricing__title', 'ud-heading-xl')}>Tóm tắt</h2>
                     <div className={cx('list__amount-summary', 'ud-text-sm')}>
                         <span>Giá gốc: </span>
-                        <span className={cx('total__curent')}> ₫ 0</span>
+                        <span className={cx('total__curent')}> ₫ {total}</span>
                     </div>
                     <div className={cx('discount__amount-summary', 'ud-text-sm')}>
                         <span>Mức chiết khấu: </span>
@@ -21,7 +21,7 @@ function Marketplace() {
                     <div className={cx('pricing__content-divider')} />
                     <div className={cx('total__amount-summary', 'ud-text-sm')}>
                         <span>Tổng tiền:</span>
-                        <span className={cx('total__payment')}>₫ 0</span>
+                        <span className={cx('total__payment')}>₫ {total}</span>
                     </div>
                 </section>
                 <div className={cx('check__out-btn')}>
@@ -44,6 +44,7 @@ function Marketplace() {
                             <Button
                                 size={cx('ud-btn-large')}
                                 className={cx('ud-btn', 'ud-btn-brand', 'ud-heading-md', 'checkout-button')}
+                                onClick={makePayment}
                             >
                                 <span>Hoàn tất thanh toán</span>
                             </Button>

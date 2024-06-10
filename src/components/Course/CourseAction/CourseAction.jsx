@@ -2,14 +2,15 @@ import classNames from 'classnames/bind';
 
 import styles from './CourseAction.module.scss';
 import Image from '~/components/Image';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
-function CourseAction({ study, cart, wishlist }) {
+function CourseAction({ study, cart, wishlist, title, price, creator, image, slug }) {
     return (
         <div className={cx('panel-item', 'item-card-module')}>
             <div className={cx('item-card-img-wrapper')}>
                 <Image
-                    src="https://img-c.udemycdn.com/course/240x135/473160_d929_3.jpg"
+                    src={image}
                     width={240}
                     height={135}
                     loading="lazy"
@@ -29,15 +30,15 @@ function CourseAction({ study, cart, wishlist }) {
                                 'card-module--item-card-title',
                             )}
                         >
-                            Web Design for Web Developers: Build Beautiful Websites!
+                            {title}
                         </a>
                         <span className={cx('ud-heading-sm', 'card-module--start-learning')}>Bắt đầu học</span>
                     </>
                 )}
                 {(wishlist || cart) && (
                     <>
-                        <a
-                            href="/course-dashboard-redirect/?course_id=473160"
+                        <Link
+                            href={`/courses/${slug}`}
                             className={cx(
                                 'ud-heading-sm',
                                 'card-module--course-title',
@@ -45,13 +46,13 @@ function CourseAction({ study, cart, wishlist }) {
                                 'card-module--item-card-title',
                             )}
                         >
-                            Web Design for Web Developers: Build Beautiful Websites!
-                        </a>
-                        <div className={cx('ud-text-xs', 'item-module--buyable-instructors')}>Jonas Schmedtmann</div>
+                            {title}
+                        </Link>
+                        <div className={cx('ud-text-xs', 'item-module--buyable-instructors')}>{creator}</div>
                         <div className={cx('base-price-text-module--container')}>
                             <div className={cx('base-price-text-module--price-part', 'ud-heading-sm')}>
                                 <span>
-                                    <span>₫&nbsp;2.399.000</span>
+                                    <span>₫&nbsp;{price}</span>
                                 </span>
                             </div>
                         </div>

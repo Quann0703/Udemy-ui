@@ -2,24 +2,35 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
 
 import styles from './Track.module.scss';
+import { useSearchParams } from 'react-router-dom';
 
 const cx = classnames.bind(styles);
 
-function TrackItem({ title, image, index, duration }) {
+function TrackItem({ title, image, index, duration, isDisabled, uuid }) {
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    const handleClickTrack = () => {
+        setSearchParams((params) => {
+            params.set('id', uuid);
+            return params;
+        });
+    };
     return (
         <div
             className={cx('item', {
-                active: true,
+                active: searchParams.get('id') === uuid,
+                disabled: isDisabled,
             })}
+            onClick={handleClickTrack}
         >
             <span className={cx('index')}>{index}</span>
-            <a href="watch-course.html" className={cx('link')}>
+            <button className={cx('link')}>
                 <img src={image} alt={title} className={cx('thumb')} />
-                <div>
+                <div className={cx('wrap-content')}>
                     <h3 className={cx('title')}>{title}</h3>
                     <p className={cx('ud-text-xs', 'duration')}>{duration}</p>
                 </div>
-            </a>
+            </button>
         </div>
     );
 }

@@ -1,4 +1,6 @@
 import classNames from 'classnames/bind';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '~/redux/cartSlice';
 
 import styles from './Content.module.scss';
 import Button from '~/components/Button';
@@ -15,6 +17,8 @@ import {
 } from '~/components/Icons';
 import { IncentiveItem } from '~/components/Incentive';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 const cx = classNames.bind(styles);
 
 const LISTINCENTIVE = [
@@ -75,7 +79,9 @@ const LISTINCENTIVE = [
 ];
 function SidebarContent({ isRegistered, data = [], onClick }) {
     const [none, setNone] = useState(false);
-    const { image, price } = data;
+    const { image, price, slug } = data;
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
@@ -90,6 +96,11 @@ function SidebarContent({ isRegistered, data = [], onClick }) {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    const handleClickLearn = () => {
+        if (isRegistered) {
+            navigate(`/watch?course=${slug}`);
+        }
+    };
     return (
         <div className={cx('sidebar-container--content')}>
             <div className={cx('sidebar-container--content-group')}>
@@ -142,6 +153,9 @@ function SidebarContent({ isRegistered, data = [], onClick }) {
                                                     <Button
                                                         size={cx('ud-btn-large')}
                                                         className={cx('ud-heading-md', 'ud-btn-brand', 'add-to-cart')}
+                                                        onClick={() => {
+                                                            dispatch(addToCart(data));
+                                                        }}
                                                     >
                                                         Thêm vào giỏ hàng
                                                     </Button>
@@ -173,10 +187,10 @@ function SidebarContent({ isRegistered, data = [], onClick }) {
                                     ) : (
                                         <div className={cx('buy-box-item', 'buy-box-buy-button')}>
                                             <Button
-                                                to="/watch/html-css"
                                                 primary={cx('ud-btn-primary')}
                                                 size={cx('ud-btn-large')}
                                                 className={cx('ud-heading-md', 'btn-express-checkout')}
+                                                onClick={handleClickLearn}
                                             >
                                                 <span>Đi đến học tập</span>
                                             </Button>
